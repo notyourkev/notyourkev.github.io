@@ -50,13 +50,11 @@ h1 small { color: var(--muted); font-size: 17px; font-weight: 450; }
 
 .content-section { padding: 25px 0 9px; scroll-margin-top: 16px; }
 .content-section h2 { margin: 0 0 12px; font-size: 21px; line-height: 1.35; }
-.section-title-with-logo { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; }
-.section-title-with-logo h2 { margin-bottom: 0; }
-.bupt-seal { display: block; flex: none; width: 30px; height: 30px; }
-.bupt-seal img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .list-row { border-top: 1px solid var(--line); }
-.education-row { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; font-size: 14px; }
-.education-row > div { display: flex; flex-wrap: wrap; gap: 3px 12px; }
+.education-row { display: grid; grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: 14px; padding: 14px 0; font-size: 14px; }
+.school-mark { display: flex; width: 48px; height: 48px; align-items: center; justify-content: center; }
+.school-mark img { display: block; width: 46px; height: 46px; object-fit: contain; }
+.education-row > div { display: flex; flex-wrap: wrap; gap: 3px 12px; min-width: 0; }
 .education-row strong { font-weight: 650; }
 .education-row span { color: var(--muted); }
 
@@ -102,10 +100,9 @@ footer { display: flex; justify-content: space-between; gap: 12px; padding-block
   .profile-links { margin: 2px 0 0; }
   .content-section { padding-top: 19px; }
   .content-section h2 { font-size: 19px; margin-bottom: 9px; }
-  .section-title-with-logo { margin-bottom: 8px; }
-  .section-title-with-logo h2 { margin-bottom: 0; }
-  .bupt-seal { width: 26px; height: 26px; }
-  .education-row { display: block; font-size: 13px; }
+  .education-row { grid-template-columns: 40px minmax(0, 1fr); gap: 11px; font-size: 13px; }
+  .school-mark { width: 40px; height: 40px; }
+  .school-mark img { width: 38px; height: 38px; }
   .publication { grid-template-columns: 104px minmax(0, 1fr); gap: 12px; padding: 15px 0; }
   .paper-image { grid-row: 1 / span 2; width: 104px; height: 79px; }
   .paper-copy h3 { font-size: 14px; }
