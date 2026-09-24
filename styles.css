@@ -1,0 +1,138 @@
+:root {
+  --ink: #20242a;
+  --muted: #586270;
+  --line: #e2e6ea;
+  --link: #17619a;
+  --paper: #fff;
+  --content: 960px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.65 Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  letter-spacing: 0;
+}
+a { color: var(--link); text-underline-offset: 3px; }
+a:hover, a:focus-visible { color: #0c426e; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+.site-header { border-bottom: 1px solid var(--line); background: #fff; }
+.header-inner {
+  width: min(var(--content), calc(100% - 48px));
+  min-height: 60px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.brand { color: var(--ink); text-decoration: none; font-size: 16px; font-weight: 700; white-space: nowrap; }
+nav { display: flex; align-items: center; gap: 23px; margin-left: auto; }
+nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; white-space: nowrap; }
+.language-switch { display: flex; flex: none; gap: 2px; padding: 2px; border: 1px solid var(--line); border-radius: 5px; }
+.language-switch button { min-width: 30px; height: 27px; border: 0; border-radius: 3px; background: transparent; color: var(--muted); font: inherit; font-size: 12px; cursor: pointer; }
+.language-switch button.active { background: var(--ink); color: #fff; }
+
+.intro { display: grid; grid-template-columns: 174px minmax(0, 1fr); gap: 36px; align-items: start; padding: 47px 0 33px; }
+.portrait { display: block; width: 174px; height: 226px; object-fit: cover; object-position: top center; }
+.intro-copy { min-width: 0; }
+.affiliation { margin: 0 0 8px; color: var(--muted); font-size: 14px; font-weight: 600; }
+h1, h2, h3, p { letter-spacing: 0; }
+h1 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 13px; margin: 0; font-size: 34px; line-height: 1.25; }
+h1 small { color: var(--muted); font-size: 17px; font-weight: 450; }
+.intro-bio { margin: 14px 0 0; color: var(--ink); font-size: 14px; }
+.research-interests { margin: 9px 0 0; color: var(--ink); font-size: 14px; }
+.profile-links, .paper-links, .contact-links { display: flex; flex-wrap: wrap; gap: 7px 20px; }
+.profile-links { margin-top: 15px; }
+.profile-links a, .paper-links a, .contact-links a { font-size: 13px; font-weight: 600; }
+
+.content-section { padding: 25px 0 9px; scroll-margin-top: 16px; }
+.content-section h2 { margin: 0 0 12px; font-size: 21px; line-height: 1.35; }
+.section-title-with-logo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 7px; }
+.section-title-with-logo h2 { margin-bottom: 0; }
+.section-title-with-logo img { display: block; width: 175px; height: auto; }
+.list-row { border-top: 1px solid var(--line); }
+.education-row { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; font-size: 14px; }
+.education-row > div { display: flex; flex-wrap: wrap; gap: 3px 12px; }
+.education-row strong { font-weight: 650; }
+.education-row span { color: var(--muted); }
+
+.publication { display: grid; grid-template-columns: 206px minmax(0, 1fr); gap: 22px; padding: 17px 0; }
+.paper-image { display: block; width: 206px; height: 129px; border: 1px solid var(--line); background: #f6f8fa; }
+.paper-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.paper-copy { min-width: 0; }
+.paper-copy h3 { margin: 0 0 5px; font-size: 16px; line-height: 1.4; overflow-wrap: anywhere; }
+.paper-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0 0 6px; color: var(--muted); font-size: 12px; }
+.paper-copy > p:not(.paper-meta) { margin: 0 0 7px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+
+.experience { display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 16px; padding: 17px 0; }
+.company-logo { width: 46px; height: 46px; object-fit: contain; }
+.tencent-logo { width: 78px; }
+.experience-heading { display: flex; align-items: baseline; gap: 8px 20px; }
+.experience-heading h3 { margin: 0; font-size: 16px; }
+.role { margin: 1px 0 7px; color: var(--muted); font-size: 13px; }
+
+.contact { padding-bottom: 36px; }
+.contact p { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+footer { display: flex; justify-content: space-between; gap: 12px; padding-block: 16px 25px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+
+@media (max-width: 700px) {
+  .container, .header-inner { width: calc(100% - 36px); }
+  .header-inner { display: grid; grid-template-columns: 1fr auto; gap: 0; padding-top: 9px; }
+  .brand { grid-column: 1; grid-row: 1; }
+  .language-switch { grid-column: 2; grid-row: 1; }
+  nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: 8px; width: 100%; margin: 7px 0 0; }
+  nav a { padding: 7px 0 8px; font-size: 12px; }
+  .intro { grid-template-columns: 112px minmax(0, 1fr); gap: 16px; padding: 29px 0 25px; }
+  .portrait { grid-row: 1 / span 2; width: 112px; height: 163px; }
+  .affiliation { font-size: 11px; line-height: 1.35; }
+  h1 { display: block; font-size: 27px; }
+  h1 small { display: block; margin-top: 1px; font-size: 12px; }
+  .intro-bio, .research-interests, .profile-links { grid-column: 1 / -1; }
+  .intro-copy { display: contents; }
+  .intro-copy > .affiliation, .intro-copy > h1 { grid-column: 2; }
+  .intro-copy > .affiliation { align-self: end; margin-bottom: -9px; }
+  .intro-copy > h1 { align-self: start; }
+  .intro-bio { margin-top: 1px; font-size: 13px; }
+  .research-interests { margin: 0; font-size: 13px; }
+  .profile-links { margin: 2px 0 0; }
+  .content-section { padding-top: 19px; }
+  .content-section h2 { font-size: 19px; margin-bottom: 9px; }
+  .section-title-with-logo { margin-bottom: 8px; }
+  .section-title-with-logo h2 { margin-bottom: 0; }
+  .section-title-with-logo img { width: 133px; }
+  .education-row { display: block; font-size: 13px; }
+  .publication { grid-template-columns: 104px minmax(0, 1fr); gap: 12px; padding: 15px 0; }
+  .paper-image { grid-row: 1 / span 2; width: 104px; height: 79px; }
+  .paper-copy h3 { font-size: 14px; }
+  .paper-copy > p:not(.paper-meta), .paper-links { grid-column: 1 / -1; }
+  .paper-copy { display: contents; }
+  .paper-copy h3, .paper-copy .paper-meta { grid-column: 2; }
+  .paper-copy h3 { align-self: end; margin: 0; }
+  .paper-meta { align-self: start; margin: -8px 0 0; font-size: 11px; }
+  .paper-copy > p:not(.paper-meta) { margin: 0; font-size: 12px; }
+  .paper-links { gap: 6px 16px; }
+  .paper-links a { font-size: 12px; }
+  .experience { grid-template-columns: 56px minmax(0, 1fr); gap: 11px; }
+  .company-logo { width: 38px; height: 38px; }
+  .tencent-logo { width: 56px; }
+  .experience-heading { display: block; }
+  .experience-heading h3 { font-size: 14px; }
+  .role { font-size: 12px; }
+  .contact-links a { font-size: 12px; }
+}
+
+@media (max-width: 360px) {
+  .container, .header-inner { width: calc(100% - 28px); }
+  nav a { font-size: 11px; }
+  .intro { grid-template-columns: 100px minmax(0, 1fr); gap: 12px; }
+  .portrait { width: 100px; height: 150px; }
+  h1 { font-size: 25px; }
+  .publication { grid-template-columns: 88px minmax(0, 1fr); gap: 10px; }
+  .paper-image { width: 88px; height: 76px; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
