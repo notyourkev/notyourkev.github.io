@@ -44,16 +44,16 @@ h1, h2, h3, p { letter-spacing: 0; }
 h1 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 13px; margin: 0; font-size: 34px; line-height: 1.25; }
 h1 small { color: var(--muted); font-size: 17px; font-weight: 450; }
 .intro-bio { margin: 14px 0 0; color: var(--ink); font-size: 14px; }
-.research-interests { margin: 9px 0 0; color: var(--ink); font-size: 14px; }
 .profile-links, .paper-links, .contact-links { display: flex; flex-wrap: wrap; gap: 7px 20px; }
 .profile-links { margin-top: 15px; }
 .profile-links a, .paper-links a, .contact-links a { font-size: 13px; font-weight: 600; }
 
 .content-section { padding: 25px 0 9px; scroll-margin-top: 16px; }
 .content-section h2 { margin: 0 0 12px; font-size: 21px; line-height: 1.35; }
-.section-title-with-logo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 7px; }
+.section-title-with-logo { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; }
 .section-title-with-logo h2 { margin-bottom: 0; }
-.section-title-with-logo img { display: block; width: 175px; height: auto; }
+.bupt-seal { display: block; flex: none; width: 30px; height: 30px; }
+.bupt-seal img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .list-row { border-top: 1px solid var(--line); }
 .education-row { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; font-size: 14px; }
 .education-row > div { display: flex; flex-wrap: wrap; gap: 3px 12px; }
@@ -68,9 +68,11 @@ h1 small { color: var(--muted); font-size: 17px; font-weight: 450; }
 .paper-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0 0 6px; color: var(--muted); font-size: 12px; }
 .paper-copy > p:not(.paper-meta) { margin: 0 0 7px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 
-.experience { display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 16px; padding: 17px 0; }
-.company-logo { width: 46px; height: 46px; object-fit: contain; }
-.tencent-logo { width: 78px; }
+.experience { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 14px; padding: 17px 0; }
+.company-mark { position: relative; display: block; width: 48px; height: 48px; overflow: hidden; }
+.company-mark img { position: absolute; display: block; max-width: none; }
+.tencent-mark img { top: 3px; left: 0; width: auto; height: 42px; }
+.kuaishou-mark img { top: 3px; left: 3px; width: 42px; height: 42px; }
 .experience-heading { display: flex; align-items: baseline; gap: 8px 20px; }
 .experience-heading h3 { margin: 0; font-size: 16px; }
 .role { margin: 1px 0 7px; color: var(--muted); font-size: 13px; }
@@ -91,19 +93,18 @@ footer { display: flex; justify-content: space-between; gap: 12px; padding-block
   .affiliation { font-size: 11px; line-height: 1.35; }
   h1 { display: block; font-size: 27px; }
   h1 small { display: block; margin-top: 1px; font-size: 12px; }
-  .intro-bio, .research-interests, .profile-links { grid-column: 1 / -1; }
+  .intro-bio, .profile-links { grid-column: 1 / -1; }
   .intro-copy { display: contents; }
   .intro-copy > .affiliation, .intro-copy > h1 { grid-column: 2; }
   .intro-copy > .affiliation { align-self: end; margin-bottom: -9px; }
   .intro-copy > h1 { align-self: start; }
   .intro-bio { margin-top: 1px; font-size: 13px; }
-  .research-interests { margin: 0; font-size: 13px; }
   .profile-links { margin: 2px 0 0; }
   .content-section { padding-top: 19px; }
   .content-section h2 { font-size: 19px; margin-bottom: 9px; }
   .section-title-with-logo { margin-bottom: 8px; }
   .section-title-with-logo h2 { margin-bottom: 0; }
-  .section-title-with-logo img { width: 133px; }
+  .bupt-seal { width: 26px; height: 26px; }
   .education-row { display: block; font-size: 13px; }
   .publication { grid-template-columns: 104px minmax(0, 1fr); gap: 12px; padding: 15px 0; }
   .paper-image { grid-row: 1 / span 2; width: 104px; height: 79px; }
@@ -116,9 +117,10 @@ footer { display: flex; justify-content: space-between; gap: 12px; padding-block
   .paper-copy > p:not(.paper-meta) { margin: 0; font-size: 12px; }
   .paper-links { gap: 6px 16px; }
   .paper-links a { font-size: 12px; }
-  .experience { grid-template-columns: 56px minmax(0, 1fr); gap: 11px; }
-  .company-logo { width: 38px; height: 38px; }
-  .tencent-logo { width: 56px; }
+  .experience { grid-template-columns: 40px minmax(0, 1fr); gap: 11px; }
+  .company-mark { width: 40px; height: 40px; }
+  .tencent-mark img { top: 2px; height: 36px; }
+  .kuaishou-mark img { top: 2px; left: 2px; width: 36px; height: 36px; }
   .experience-heading { display: block; }
   .experience-heading h3 { font-size: 14px; }
   .role { font-size: 12px; }
