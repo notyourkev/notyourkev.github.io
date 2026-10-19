@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#183b36">
+<meta name="description" content="根据许颂毓简历与LLM/VLM/AIGC质量评测岗位JD定制的面试冲刺手册。">
+<title>LLM 与 AIGC 质量评测岗位 · 面试复习手册</title>
+<style>
+:root{--bg:#f5f5f0;--paper:#fff;--ink:#202d30;--muted:#617174;--accent:#176858;--accent-bg:#e8f2ec;--line:#dce3dd;--nav:#183b36;--warm:#88602a;--warm-bg:#faf3e6;--radius:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",system-ui,sans-serif;font-size:16px;line-height:1.85}a{color:var(--accent);text-underline-offset:3px}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #d19e38;outline-offset:4px}[hidden]{display:none!important}
+.shell{display:grid;grid-template-columns:242px minmax(0,1fr);max-width:1500px;margin:auto;min-height:100vh}.sidebar{background:var(--nav);color:#f1f6f2;padding:34px 24px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column}.brand{font-size:12px;letter-spacing:2px;color:#a9c7ba}.sidebar h2{font-size:23px;line-height:1.5;margin:10px 0 6px;letter-spacing:.5px}.sidebar .sub{font-size:13px;color:#bdd0c7;margin:0 0 28px}.nav{display:grid;gap:7px}.nav a{color:#dbe8e1;text-decoration:none;font-size:14px;border-radius:7px;padding:8px 10px;display:flex;gap:12px}.nav a:hover,.nav a[aria-current="location"]{background:#2a5149;color:white}.nav .num{opacity:.6;font-size:12px;padding-top:2px}.side-bottom{margin-top:auto;padding-top:28px;font-size:12px;color:#b9ccc2;line-height:1.8}.side-bottom strong{display:block;font-size:25px;font-weight:500;color:#fff}.progress-track{height:4px;border-radius:10px;background:#41635a;margin:10px 0}.progress-track span{display:block;height:100%;width:0;background:#b7d8ba;border-radius:10px;transition:width .2s}
+main{min-width:0;padding:43px 54px 50px;max-width:1150px}.eyebrow{font-size:12px;letter-spacing:1.8px;color:var(--accent);font-weight:700}.hero h1{font-size:clamp(29px,3.4vw,43px);line-height:1.35;letter-spacing:-1px;margin:12px 0 17px;max-width:850px}.hero h1 span{display:block;font-size:.68em;font-weight:500;margin-top:6px;letter-spacing:0}.hero .lead{font-size:18px;max-width:830px;margin:0 0 18px;line-height:1.8}.meta{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}.chip{display:inline-block;border:1px solid var(--line);border-radius:100px;padding:3px 12px;font-size:12px;background:#fafcf8;color:#4a6059}.plan{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:17px 0 21px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.plan p{margin:0;font-size:13px;color:var(--muted)}.plan b{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}
+.toolbar{margin:26px 0 12px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}.filters{display:flex;gap:5px;flex-wrap:wrap}.tool-btn{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-size:13px;color:var(--ink)}.tool-btn:hover{border-color:var(--accent)}.tool-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:white}.search{width:100%;margin-top:4px;position:relative}.search input{width:100%;border:1px solid var(--line);border-radius:9px;background:white;padding:11px 14px;font-size:14px;color:var(--ink)}.utility{margin-left:auto;display:flex;gap:6px}.hint,.result-status{color:var(--muted);font-size:12px;margin:4px 0}.result-status{min-height:22px}.section{margin-top:34px;scroll-margin-top:24px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:12px}.section-head h2{font-size:23px;line-height:1.45;margin:0;font-weight:650}.section-head h2 small{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:1px;margin-right:10px}.section-head>span{font-size:12px;color:var(--muted);white-space:nowrap}.section-intro{font-size:14px;color:var(--muted);margin:0 0 15px}
+.study-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 25px;margin-bottom:13px;min-width:0}.card-top{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-bottom:9px}.badge{font-size:11px;line-height:1.6;font-weight:650;letter-spacing:.3px;padding:2px 8px;background:var(--accent-bg);color:var(--accent);border-radius:4px}.badge.optional{background:#edf0f5;color:#55617c}.mark{color:#6b7a73;font-size:12px;border:0;padding:3px 4px;background:transparent;white-space:nowrap}.mark[aria-pressed="true"]{color:var(--accent);font-weight:700}.mark[aria-pressed="true"]:before{content:"✓ ";font-weight:700}.study-card h3{font-size:18px;line-height:1.6;margin:0 0 10px}.study-card p{margin:9px 0;font-size:14px}.study-card ul,.study-card ol{padding-left:1.35em;margin:8px 0;font-size:14px}.study-card li{padding-left:3px;margin:5px 0}.study-card strong{font-weight:650;color:#204c40}.answer{margin-top:8px}.answer summary{font-size:12px;color:var(--accent);cursor:pointer;width:fit-content;user-select:none;padding:1px 0}.answer[open] summary{margin-bottom:8px}.oral{font-size:15px!important;line-height:1.95}.followup{color:var(--muted);font-size:13px!important;border-top:1px dashed var(--line);padding-top:10px;margin-top:13px!important}.pitfall{color:#795820;font-size:13px!important}.mini-label{font-weight:650;letter-spacing:.5px;font-size:12px;color:var(--accent);margin-top:14px}.table-wrap{width:100%;overflow-x:auto;margin:12px 0}table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.75;min-width:460px}th{text-align:left;background:#edf3ee;color:#25483e;font-weight:650}td,th{border:1px solid var(--line);padding:9px 12px;vertical-align:top}td:first-child{font-weight:600;min-width:95px}code{font-family:Consolas,"SFMono-Regular",monospace;font-size:.9em;color:#315950;background:#f0f4ef;border-radius:4px;padding:1px 4px;overflow-wrap:anywhere}.formula{font-family:Consolas,"Microsoft YaHei",monospace;font-size:13px!important;line-height:1.9;background:#f6f8f4;padding:11px 14px;border-radius:7px;overflow-wrap:anywhere}.source-ref{font-size:11px;text-decoration:none;margin-left:4px;vertical-align:super}.step-line{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0;font-size:13px}.step-line span{padding:3px 8px;border:1px solid var(--line);border-radius:4px}.step-line i{font-style:normal;color:#8b9b93;padding-top:3px}.checklist{list-style:none!important;padding-left:0!important}.checklist li{position:relative;padding-left:23px;margin:8px 0}.checklist li:before{content:"□";position:absolute;left:0;color:var(--accent)}.empty{padding:35px 20px;text-align:center;color:var(--muted);background:white;border:1px dashed var(--line);border-radius:12px;margin-top:20px}.references{margin-top:36px;border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted)}.references summary{cursor:pointer;color:var(--ink);font-size:14px;font-weight:650}.references ol{padding-left:20px;columns:2;column-gap:35px}.references li{margin:9px 0;break-inside:avoid;overflow-wrap:anywhere}.references p{font-size:12px}.bottom{display:flex;gap:15px;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);margin-top:25px;padding-top:15px;border-top:1px solid var(--line)}.no-js{background:var(--warm-bg);padding:10px;font-size:13px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:1500px){.shell{border-left:1px solid var(--line);border-right:1px solid var(--line)}}
+@media(max-width:1050px){.shell{grid-template-columns:205px minmax(0,1fr)}.sidebar{padding:28px 17px}main{padding:32px 28px}.study-card{padding:19px 21px}.section-head>span{display:none}}
+@media(max-width:760px){html{scroll-padding-top:12px}.shell{display:block}.sidebar{position:static;height:auto;padding:19px 20px 12px}.brand{font-size:10px}.sidebar h2{font-size:19px;display:inline-block;margin:5px 12px 8px 0}.sidebar .sub{display:inline-block;font-size:11px;margin:0}.nav{display:flex;overflow-x:auto;gap:4px;padding:5px 0 3px;scrollbar-width:thin}.nav a{white-space:nowrap;font-size:12px;padding:5px 9px;gap:6px}.side-bottom{display:none}main{padding:25px 18px 35px}.hero h1{font-size:31px}.hero .lead{font-size:16px}.plan{gap:14px}.plan p{font-size:12px}.toolbar{margin-top:20px}.utility{margin-left:0}.tool-btn{padding:7px 10px;font-size:12px}.section{margin-top:26px}.section-head h2{font-size:21px}.study-card{padding:17px 17px;border-radius:11px}.study-card h3{font-size:17px}.study-card p,.study-card ul,.study-card ol{font-size:14px}.oral{font-size:14px!important}.references ol{columns:1}.bottom{align-items:flex-start}.chip{font-size:11px;padding:2px 9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@page{size:A4;margin:15mm 14mm}
+@media print{body{font-size:10pt;line-height:1.65;color:#111;background:#fff}.shell{display:block;max-width:none}.sidebar,.toolbar,.hint,.result-status,.mark,.answer summary,.bottom,.references summary,.no-print{display:none!important}main{padding:0;max-width:none}.hero h1{font-size:24pt;margin-top:5pt}.hero h1 span{font-size:17pt}.hero .lead{font-size:11pt}.meta{margin:8pt 0}.chip{font-size:8pt;padding:1pt 6pt}.plan{padding:8pt 0;gap:15pt}.plan p,.plan b{font-size:8.5pt}.section{margin-top:18pt}.section-head{margin-bottom:7pt;break-after:avoid}.section-head h2{font-size:15pt}.section-head h2 small{font-size:8pt}.section-intro{font-size:9pt}.study-card{border:0;border-top:1px solid #bbb;border-radius:0;padding:11pt 0 5pt;margin:0 0 6pt;break-inside:avoid}.study-card h3{font-size:11.5pt;break-after:avoid}.study-card p,.study-card ul,.study-card ol,.oral{font-size:9.5pt!important;line-height:1.7}.badge{font-size:8pt;border:1px solid #999;background:none!important;color:#333!important}.card-top{margin-bottom:5pt}.answer>*:not(summary){display:block!important}.table-wrap{overflow:visible}table{min-width:0;font-size:8.5pt}td,th{padding:5pt 7pt}.formula{font-size:9pt!important;background:none;padding:4pt 0}.followup,.pitfall{font-size:9pt!important}.references{font-size:8pt}.references ol{columns:2}.references[open]>*{display:block}.source-ref{color:#444}.step-line{gap:4pt;font-size:8.5pt}.step-line span{padding:1pt 5pt}a{color:inherit}.section[hidden],.study-card[hidden]{display:block!important}}
+.ml-intro{font-size:14px}.ml-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0}.ml-tab,.ml-btn{border:1px solid #cddbd3;background:#f8fbf8;border-radius:8px;color:#254e42;padding:8px 12px;font:inherit;font-size:13px;cursor:pointer}.ml-tab[aria-selected="true"],.ml-btn[aria-pressed="true"]{background:#176858;color:#fff;border-color:#176858}.ml-tab:focus-visible,.ml-btn:focus-visible,.ml-slider:focus-visible{outline:3px solid #d19e38;outline-offset:3px}.ml-panel{border-top:1px solid #dce3dd;padding-top:16px}.ml-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}.ml-box{padding:15px;border:1px solid #dce3dd;border-radius:12px;background:#fbfcf9;min-width:0}.ml-controls{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.ml-control{display:grid;gap:5px;margin:12px 0;font-size:13px}.ml-slider{width:100%;accent-color:#176858;min-height:24px}.ml-value{font-variant-numeric:tabular-nums;font-weight:700;color:#176858}.ml-note{font-size:12px!important;color:#617174}.ml-formula{font-family:Consolas,"Microsoft YaHei",monospace;white-space:normal;overflow-wrap:anywhere;background:#edf3ee;padding:11px 13px;border-radius:7px;font-size:13px;line-height:1.9;margin:10px 0}.ml-stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.ml-stat{padding:10px;background:#edf3ee;border-radius:8px;font-size:11px;text-align:center}.ml-stat strong{display:block;font-size:20px;line-height:1.6;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}.ml-figure{margin:12px 0;min-width:0}.ml-svg{display:block;width:100%;height:auto;max-height:340px;background:#fff;border:1px solid #dce3dd;border-radius:10px}.ml-figure figcaption{font-size:12px;line-height:1.65;color:#617174;margin-top:7px}.ml-table-wrap{overflow-x:auto;margin:12px 0}.ml-table{width:100%;min-width:360px;font-size:12px}.ml-table td,.ml-table th{padding:7px 9px}.ml-table td:first-child{min-width:40px}.ml-tiny-table{min-width:280px}.ml-correct{background:#e9f4ea;color:#22563f}.ml-wrong{background:#fbedeb;color:#9b4437}.ml-neutral{background:#f8f2e4;color:#7e602d}.ml-pairs{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0}.ml-pair{font-size:11px;padding:4px 7px;border:1px solid #dce3dd;border-radius:5px}.ml-steps{font-size:13px;padding-left:20px}.ml-steps li{margin:8px 0}.ml-formula-title{font-size:13px;font-weight:700;margin-top:15px}.ml-prompt-row{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.ml-prompt{border:1px solid #cddbd3;border-radius:6px;min-width:42px;padding:7px 4px;text-align:center;background:white;font-size:12px;font-variant-numeric:tabular-nums}.ml-prompt small{display:block;font-size:10px;color:#617174}.ml-prompt.ml-picked{background:#dceee2;border-color:#176858;box-shadow:0 0 0 2px #b7d8ba}.ml-sample{min-height:30px;font-size:13px;overflow-wrap:anywhere}.ml-progress{height:6px;background:#dce3dd;border-radius:5px;overflow:hidden}.ml-progress span{display:block;background:#176858;width:0;height:100%}.ml-token-row{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0 14px}.ml-token{background:#e6f0e9;border:1px solid #cfdfd4;border-radius:6px;padding:5px 8px;font-size:14px}.ml-token.ml-token-change{background:#faece6;border-color:#e9c8b8;color:#8e4e32}.ml-large{font-size:26px;font-variant-numeric:tabular-nums;font-weight:700;color:#176858}.ml-a11y-live{min-height:24px}.ml-source{font-size:12px!important;color:#617174}.ml-arrow{font-size:20px;color:#617174;display:inline-block;padding:0 9px}.ml-ci-legend{display:flex;gap:15px;flex-wrap:wrap;font-size:12px;margin-top:8px}.ml-ci-legend span:before{content:"";display:inline-block;width:14px;height:4px;background:#176858;margin-right:5px;vertical-align:middle}.ml-ci-legend span+span:before{background:#b46c40}.ml-inline-details{margin-top:10px;font-size:13px}.ml-inline-details summary{cursor:pointer;color:#176858}.ml-print-label{font-size:17px;margin:0 0 14px!important}.ml-panel h4{font-size:15px;margin:10px 0}.ml-pill{display:inline-block;padding:3px 8px;border-radius:5px;background:#e8f2ec;color:#176858;font-size:12px}.ml-screenreader{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:720px){.ml-grid{grid-template-columns:1fr}.ml-tab{flex:1 1 42%;font-size:12px;padding:9px 7px}.ml-stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ml-stat{padding:7px 4px}.ml-stat strong{font-size:17px}.ml-box{padding:12px}.ml-table{font-size:11px}.ml-formula{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.ml-progress span{transition:none!important}.ml-prompt{transition:none!important}}
+@media print{.ml-tabs,.ml-controls,.ml-control,.ml-sample,.ml-prompt-row,.ml-progress,.ml-animation-help{display:none!important}.ml-panel[hidden]{display:block!important}.ml-panel{display:block!important;margin-top:18px;padding-top:12px;break-inside:auto}.ml-grid{grid-template-columns:1fr 1fr}.ml-box{break-inside:avoid}.ml-svg{max-height:240px}.ml-table-wrap{overflow:visible}.ml-table{min-width:0}.ml-stat strong{font-size:17px}.ml-print-label{display:block!important}.ml-source{font-size:10px!important}}
+
+.ar-family-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:15px 0}.ar-family-map>div{display:flex;flex-direction:column;gap:5px;padding:15px 17px;border:1px solid var(--line);border-radius:9px;background:#fafcf9}.ar-family-map>div:last-child{grid-column:1/-1}.ar-family-map b{font-size:14px;color:var(--accent)}.ar-family-map span{font-size:13px}.ar-family-map em{font-size:13px;font-style:normal;color:var(--muted)}.ar-family-map small{font-size:12px;color:var(--muted)}.ar-comparison small{font-weight:400;color:var(--muted)}
+.ar-model-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 20px}.ar-model-tabs button{font-size:12px;border:1px solid var(--line);border-radius:7px;padding:8px 11px;color:var(--ink);background:#fff}.ar-model-tabs button[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}.ar-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.ar-heading h4{font-size:19px;line-height:1.6;margin:0 0 5px}.ar-heading p{color:var(--muted);font-size:12px;margin:0}.ar-demo-tag{font-size:11px;line-height:1.7;max-width:145px;color:var(--muted);flex-shrink:0}.ar-controls{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:17px 0 12px}.ar-controls>span{color:var(--muted);font-size:12px;margin-left:7px}.ar-controls button:disabled{opacity:.42;cursor:default}.ar-steps{display:flex;gap:4px;flex-wrap:wrap;margin:10px 0}.ar-steps button{font-size:11px;padding:5px 8px;border:0;border-bottom:2px solid var(--line);background:transparent;color:var(--muted)}.ar-steps button[aria-pressed=true]{border-color:var(--accent);color:var(--accent);font-weight:650}.ar-viewport{overflow-x:auto;border:1px solid var(--line);border-radius:9px;background:#fcfdfb;padding:8px 0;margin:13px 0 5px}.ar-viewport svg{display:block;width:100%;min-width:790px;max-height:none}.ar-viewport text{font-family:"Microsoft YaHei","PingFang SC",sans-serif;fill:var(--ink);font-size:13px}.ar-viewport .ar-node-label{font-size:14px;font-weight:600}.ar-viewport .ar-node-sub{font-size:11.5px;fill:var(--muted)}.ar-node rect{fill:#fff;stroke:#b9c8bf;stroke-width:1.2;transition:fill .3s,stroke .3s}.ar-node.ar-active rect{fill:#e5f1e8;stroke:var(--accent);stroke-width:2}.ar-node.ar-complete rect{fill:#f0f6ef}.ar-link{fill:none;stroke:#b4c3b9;stroke-width:1.7}.ar-link.ar-active-link{stroke:var(--accent);stroke-width:2.4}.ar-particle{fill:#176858}.ar-annotation{font-size:11px!important;fill:#617174!important}.ar-caption{font-size:12px!important;fill:#315950!important}.ar-scroll-note{font-size:11px!important;color:var(--muted);margin:3px 0 12px!important}.ar-step-detail{padding:11px 0 13px;border-bottom:1px solid var(--line);min-height:105px}.ar-step-detail>b{font-size:14px;color:var(--accent)}.ar-step-detail>p{font-size:14px;line-height:1.9;margin:6px 0}.ar-facts{display:grid;grid-template-columns:1fr 1fr;gap:23px;margin-top:15px}.ar-facts h4,.ar-special h4,.ar-recent h4{font-size:13px;margin:0 0 5px;color:var(--accent)}.ar-facts p{font-size:13px;margin:4px 0;line-height:1.85}.ar-source{font-size:11px!important;color:var(--muted);overflow-wrap:anywhere}.ar-speech{font-size:14px!important;border-top:1px dashed var(--line);margin-top:15px!important;padding-top:12px}.ar-special{margin-top:15px}.ar-special table{min-width:490px;font-size:12px}.ar-special td,.ar-special th{padding:7px 9px;text-align:center}.ar-special td:first-child,.ar-special th:first-child{text-align:left}.ar-cell-yes{color:var(--accent);font-weight:650}.ar-cell-no{color:#a08765}.ar-slider-label{display:flex;justify-content:space-between;font-size:13px;gap:15px}.ar-slider-label output{font-family:Consolas,monospace;color:var(--accent)}#ar-excellent{width:100%;accent-color:var(--accent)}.ar-grade-bars{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin:15px 0}.ar-grade-col{text-align:center;min-width:0}.ar-grade-track{height:100px;display:flex;align-items:flex-end;justify-content:center;background:#f0f4ee;border-radius:5px}.ar-grade-fill{width:70%;max-width:60px;background:#719c86;border-radius:3px 3px 0 0;transition:height .3s}.ar-grade-col>span{display:block;font-size:11px;color:var(--muted);overflow-wrap:anywhere}.ar-grade-col>b{display:block;font-size:13px;font-weight:500;font-variant-numeric:tabular-nums}.ar-small{font-size:12px!important;color:var(--muted)}.ar-recent{margin-top:20px;padding-top:14px;border-top:1px solid var(--line)}.ar-recent p{font-size:12px}.ar-print-all{display:none}.ar-static-note{font-size:12px;color:var(--muted)}
+@media(max-width:760px){.ar-family-map{grid-template-columns:1fr}.ar-family-map>div:last-child{grid-column:auto}.ar-heading{display:block}.ar-heading h4{font-size:17px}.ar-demo-tag{max-width:none;display:block;margin-top:7px}.ar-facts{grid-template-columns:1fr;gap:12px}.ar-grade-bars{gap:5px}.ar-steps button{font-size:11px;padding:5px 6px}.ar-step-detail{min-height:0}.ar-model-tabs{gap:5px}.ar-model-tabs button{padding:7px 9px}.ar-comparison{min-width:700px}.ar-family-map>div{padding:12px 14px}}
+@media(prefers-reduced-motion:reduce){.ar-particle{display:none}.ar-node rect,.ar-grade-fill{transition:none}}
+@media print{.ar-model-tabs,.ar-controls,.ar-steps,#ar-model-panel,.ar-scroll-note{display:none!important}.ar-print-all{display:block}.ar-print-model{break-inside:avoid;padding:8pt 0;border-top:1px solid #bbb}.ar-print-model h4{font-size:11pt;margin:4pt 0}.ar-print-model p{font-size:9pt!important;line-height:1.6;margin:4pt 0}.ar-family-map{grid-template-columns:1fr 1fr;gap:6pt}.ar-family-map>div{padding:7pt;background:none}.ar-family-map b,.ar-family-map span,.ar-family-map em,.ar-family-map small{font-size:8.5pt}.ar-comparison{min-width:0}.ar-recent p{font-size:9pt!important}#architecture-workbench{break-inside:auto}}
+
+/* Keep touch targets readable without scaling whole diagrams down. */
+@media(max-width:1150px){.ml-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.search input{font-size:16px}.tool-btn,.ml-btn,.ml-tab,.ar-model-tabs button{min-height:44px}.ar-steps button{min-height:40px}.mark{min-height:40px}.ar-viewport{overscroll-behavior-x:contain}.ml-svg{min-height:160px}.ml-prompt small{font-size:11px}.ml-note,.ar-small{line-height:1.85}.ar-scroll-note{font-size:12px!important}.side-bottom{display:none}}
+@media print{#metric-workbench,#scorer-map,#architecture-workbench{break-inside:auto}.ml-grid{grid-template-columns:1fr 1fr}}
+
+</style>
+</head>
+<body>
+<a class="sr-only" href="#main">跳到正文</a>
+<div class="shell">
+<aside class="sidebar" aria-label="复习目录">
+  <div class="brand">INTERVIEW FIELD NOTES</div>
+  <h2>面试复习手册</h2><p class="sub">LLM / VLM / AIGC 质量评测</p>
+  <nav class="nav">
+    <a href="#opening"><span class="num">01</span>开场与岗位匹配</a>
+    <a href="#methods"><span class="num">02</span>评测方法必背</a>
+    <a href="#automatic"><span class="num">03</span>自动评分与多模态</a>
+    <a href="#metrics-lab"><span class="num">04</span>指标计算实验室</a>
+    <a href="#scorer-models"><span class="num">05</span>打分模型架构图</a>
+    <a href="#projects"><span class="num">06</span>简历项目追问</a>
+    <a href="#delivery"><span class="num">07</span>工程与补盲</a>
+    <a href="#morning"><span class="num">08</span>明早最后一遍</a>
+  </nav>
+  <div class="side-bottom"><div>已标记掌握</div><strong id="progress-text">0 / 18</strong><div class="progress-track" role="progressbar" aria-label="复习掌握进度" aria-valuemin="0" aria-valuemax="18" aria-valuenow="0"><span id="progress-bar"></span></div><div>每题先口述 30–60 秒<br>再展开答案，核对遗漏。</div></div>
+</aside>
+<main id="main">
+<header class="hero">
+  <div class="eyebrow">许颂毓 · 定制冲刺版 · 2026.10.20 面试</div>
+  <h1>LLM 与 AIGC 质量评测<span>把项目经历讲成一套可复现的评测闭环</span></h1>
+  <p class="lead">你的主线：<strong>业务评测体系 → 可信人评与机评 → 自动化工具 → 失效归因 → 模型迭代。</strong>重点讲清每个分数从哪里来、能证明什么、如何变成下一步行动。</p>
+  <div class="meta"><span class="chip">15 个基础单元 + 3 个图解单元</span><span class="chip">基础约 60 分钟 · 图解按需</span><span class="chip">明早 10 分钟回顾</span><span class="chip">手机可读 · 单文件可离线</span></div>
+  <div class="plan"><p><b>今晚 60 分钟</b>开场 5 分钟 → 方法 20 分钟 → 自动评分 10 分钟 → 项目 15 分钟 → 补盲与自测 10 分钟。</p><p><b>明早 10 分钟</b>点“明早速记”，口述自我介绍、指标区别、RM 项目、评测平台和最后检查清单。</p></div>
+</header>
+<noscript><p class="no-js">当前未启用 JavaScript。基础正文可阅读；交互实验、模型切换、搜索与进度标记需启用 JavaScript。</p></noscript>
+<div class="toolbar" aria-label="复习工具">
+  <div class="filters" role="group" aria-label="筛选复习内容"><button class="tool-btn" data-filter="all" aria-pressed="true">全部</button><button class="tool-btn" data-filter="p0" aria-pressed="false">必背 P0</button><button class="tool-btn" data-filter="project" aria-pressed="false">项目追问</button><button class="tool-btn" data-filter="visual" aria-pressed="false">图解演示</button><button class="tool-btn" data-filter="quick" aria-pressed="false">明早速记</button></div>
+  <div class="utility"><button class="tool-btn" id="toggle-answers" aria-pressed="false">收起答案自测</button><button class="tool-btn" id="print">打印全文</button></div>
+  <div class="search"><label class="sr-only" for="search">搜索题目或知识点</label><input id="search" type="search" placeholder="搜索：SRCC、BT、HPSv3、VideoReward、VGIF…" autocomplete="off"></div>
+</div>
+<p class="hint">默认展开答案。点击“标记掌握”记录复习进度；记录仅保存在当前浏览器，可在文末清除。</p>
+<p id="result-status" class="result-status" aria-live="polite"></p>
+<div id="empty" class="empty" hidden>没有匹配内容。换一个关键词，或切换到“全部”。</div>
+
+<section class="section" id="opening" aria-labelledby="opening-title">
+<div class="section-head"><h2 id="opening-title"><small>01</small>开场与岗位匹配</h2><span>先建立你的评测主线</span></div>
+<article class="study-card" id="intro" data-tags="p0 project quick">
+<div class="card-top"><span class="badge">P0 · 开场</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>先练熟这段 60 秒自我介绍</h3>
+<details class="answer" open><summary>参考回答</summary>
+<p class="oral">我是许颂毓，北京邮电大学人工智能方向 2027 届硕士。我主要做多模态理解、视频生成评测和评测工具建设。在腾讯视频，我参与了业务评测体系、视觉质感与运动质量 Reward Model，以及在线人评和机评平台的建设，也把奖励模型接入 Flow-GRPO 做过生成优化验证。此前在快手，我做过 VLM 能力评测和 Video Agent 的任务与轨迹诊断。研究上，我是 CineTechBench 的共同第一作者、VGIF-Score 的第一作者，关注影视理解和复杂时空指令遵循。我希望把这些经验用于贵团队的评测系统建设，提供可信的版本比较、问题定位和迭代依据。</p>
+<p><strong>岗位对应：</strong>评测体系讲腾讯三阶段门控；自动评分讲 VLM/RM；工程讲在线评测平台；诊断能力讲 VGIF 与快手 Agent。论文介绍控制在一句，接着讲你做了什么。</p>
+<p class="followup"><b>第一轮追问：</b>“你个人负责的模块是什么？”准备两个明确模块，各讲输入、实现、验收方法；把个人实现与团队协作分开。</p>
+</details></article>
+</section>
+
+<section class="section" id="methods" aria-labelledby="methods-title">
+<div class="section-head"><h2 id="methods-title"><small>02</small>评测方法必背</h2><span>本 JD 最可能连续追问的四题</span></div>
+<article class="study-card" id="q1" data-tags="p0 quick">
+<div class="card-top"><span class="badge">P0 · 体系设计</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q1 如果让你设计文生视频评测体系，怎么做</h3>
+<details class="answer" open><summary>参考回答与追问</summary>
+<p><strong>先明确业务任务和失败成本，再定维度、量表、样本、算子和上线门槛。</strong>结合你的经历，可讲“基础质量 → 指令遵循 → 高阶质量”的三阶段门控，安全作为独立硬约束。<a class="source-ref" href="#ref-vbench">[1]</a></p>
+<div class="table-wrap"><table><thead><tr><th>维度</th><th>具体看什么</th><th>怎样评</th></tr></thead><tbody>
+<tr><td>技术质量</td><td>清晰度、噪声、闪烁、局部变形</td><td>质量算子 + 人评锚点</td></tr>
+<tr><td>语义与指令</td><td>实体、数量、属性、关系、动作与顺序</td><td>指令拆解 + VLM 问答 + 证据核验</td></tr>
+<tr><td>运动与时序</td><td>身份连续、动作完成、交互与物理合理性</td><td>连续片段分析 + 时序算子 + 人工复核</td></tr>
+<tr><td>美学与专业度</td><td>质感、光照、构图、运镜、镜头衔接</td><td>专家量表 + 校准后的专用 Judge/RM</td></tr>
+<tr><td>安全</td><td>有害内容、隐私、偏见、对抗输入</td><td>风险标签 + 对抗集 + 独立安全门槛</td></tr>
+</tbody></table></div>
+<p>每个考点定义<strong>判定对象、证据、评分锚点与不适用条件</strong>。先报告全量样本的各门控通过率；高阶质量注明比较条件，并补充 A/B 双方共同通过的对齐子集比较，避免各模型分别只看自己的“幸存样本”。</p>
+<p class="pitfall"><b>易错：</b>视频几乎不动，也可能拿到很高的一致性分。要同时检查“是否按指令运动、动作是否完成”，不能只奖励平滑或大运动。</p>
+<p class="followup"><b>用你的项目接：</b>腾讯 70+ 可诊断考点；VGIF 将复杂指令拆成可验证的原子条件。总分用于概览，切片与考点用于定位问题。</p>
+</details></article>
+
+<article class="study-card" id="q2" data-tags="p0">
+<div class="card-top"><span class="badge">P0 · 数据与可比性</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q2 如何构建评测集，让 A/B 模型比较公平</h3>
+<details class="answer" open><summary>参考回答与追问</summary>
+<p>以<strong>真实业务分布为主、困难与边界场景为补充</strong>，按任务、风格、景别、人数、运动强度、难度做分层覆盖。结合你的项目，可以讲业务采样、正向标签/RAG 构造、真实影视片段反向构造，再用标签分析和贪心覆盖补齐空缺。</p>
+<ul><li><strong>防泄漏：</strong>按 prompt 家族、源视频/近重复内容分组切分训练、校准和测试；额外做生成器或场景留出，检查跨域泛化。</li><li><strong>公平协议：</strong>固定测试 prompt 与参考素材，约束时长、分辨率、采样次数及预算；逐模型记录参数。相同 seed 不代表跨模型产生相同随机条件。</li><li><strong>可复现：</strong>保存数据、模型、评分器和规则版本，以及随机种子、预处理、原始输出、失败日志。固定 seed 也不能保证所有硬件与算子完全确定。</li></ul>
+<p class="followup"><b>追问“新版本只高一点，能上线吗”：</b>看配对差值、置信区间与关键切片回归。按 prompt 或源内容簇 bootstrap，保留同组 A/B 配对；同一视频的帧和多名评分员意见不能当独立视频扩充样本量。</p>
+</details></article>
+
+<article class="study-card" id="q3" data-tags="p0 quick">
+<div class="card-top"><span class="badge">P0 · 指标口径</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q3 PLCC、SRCC、KROCC 和胜率分别说明什么</h3>
+<details class="answer" open><summary>参考回答与追问</summary>
+<div class="table-wrap"><table><thead><tr><th>指标</th><th>一句话解释</th><th>面试时补一句</th></tr></thead><tbody>
+<tr><td>PLCC</td><td>Pearson，预测与人工分数的线性相关</td><td>高相关不代表绝对分值已校准</td></tr>
+<tr><td>SRCC</td><td>Spearman，看排序的单调一致性</td><td>有并列分用平均秩；不要硬套无 ties 简式</td></tr>
+<tr><td>KROCC</td><td>Kendall，看样本对排序的一致程度</td><td>量表有并列时说明使用 tau-b 等版本</td></tr>
+<tr><td>MAE / RMSE</td><td>绝对分数误差；RMSE 更惩罚大误差</td><td>比较前固定评分范围与校准方式</td></tr>
+<tr><td>Pairwise Accuracy</td><td>预测胜/负/平与人工标签的符合率</td><td>衡量裁判，不等同生成模型胜率</td></tr>
+<tr><td>BLEU / ROUGE</td><td>以 n-gram 等重叠衡量文本与参考的匹配</td><td>适合特定文本任务；不能直接评价视频物理或整体生成质量</td></tr>
+</tbody></table></div>
+<p><strong>直觉：</strong>预测分统一加 10，PLCC/SRCC 仍可很高，但 MAE 很差；顺序对、分数间距不对，SRCC 也可能高于 PLCC。若 PLCC 使用非线性映射，要讲清拟合协议；业务验收中的映射应在独立校准数据上确定。<a class="source-ref" href="#ref-stats">[2]</a></p>
+<p class="formula">平局计半分的胜率 = (W + 0.5 × T) / (W + T + L)<br>排除平局的胜率 = W / (W + L)　另报平局率与 W/T/L 样本数。</p>
+<p><strong>你项目里四个名称要分清：</strong><code>score_srcc</code> 是视频分数相关；<code>winratio_srcc</code> 是按项目协议聚合后模型胜率排序的相关；<code>acc_with_ties</code> 是胜/负/平三分类准确率；本项目的 <code>acc_without_ties</code> 仅移除人工 GT 平局，剩余样本若预测为平局仍算错。</p>
+<p class="pitfall"><b>易错：</b>把“SRCC 0.8”说成“准确率 80%”；把少数模型的聚合排名相关，当成样本级评分准确的充分证明。</p>
+<p><a href="#metrics-lab">进入指标计算实验室：看公式、手算与可交互示例 →</a></p>
+</details></article>
+
+<article class="study-card" id="q4" data-tags="p0">
+<div class="card-top"><span class="badge">P0 · 主观实验</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q4 怎样组织可靠的人评，你了解 BT.500 吗</h3>
+<details class="answer" open><summary>参考回答与追问</summary>
+<p>按“<strong>定义量表 → 招募培训 → 试标对齐 → 随机盲评 → 过程质控 → 清洗分析</strong>”回答。BT.500 是电视图像主观质量评价的方法标准，可借鉴观看条件、实验组织和观察者处理；AIGC 的语义、运动、安全维度需要另行设计，使用 MOS 不等于完全遵循标准。<a class="source-ref" href="#ref-itu">[3]</a></p>
+<ul><li><strong>量表：</strong>如技术质量 1–5 分，1 分严重损坏影响观看，3 分有明显瑕疵但可用，5 分基本无可见缺陷；2/4 分也配边界例。分维打分，避免美感掩盖结构错误。</li><li><strong>组织：</strong>匹配评测员背景，先用标准例与边界例培训；统一播放器、显示与观看条件，随机顺序、隐藏模型身份，设置休息。</li><li><strong>质控：</strong>插入重复样本与预审金标，结合异常耗时、重测稳定性、维度混淆复核；不能因评分与多数人不同就直接删掉。</li><li><strong>统计：</strong>MOS 是平均意见分，连同置信区间与分布报告。有序评分可用 ordinal Krippendorff’s alpha；若将量表近似视为等距测量，可选合适的 ICC，并说明模型和一致性口径。</li></ul>
+<p class="followup"><b>追问“绝对打分还是成对比较”：</b>前者利于跨样本汇总，但量表漂移大；后者适合同 prompt 的 A/B 比较，应允许平局，注意配对成本。你可以讲平台标注器与质检器的实际模块；招募和培训只讲真实参与部分。</p>
+</details></article>
+</section>
+
+<section class="section" id="automatic" aria-labelledby="automatic-title">
+<div class="section-head"><h2 id="automatic-title"><small>03</small>自动评分与多模态</h2><span>先验证评分器，再用评分器验收模型</span></div>
+<article class="study-card" id="q5" data-tags="p0 quick">
+<div class="card-top"><span class="badge">P0 · LLM as Judge</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q5 如何证明 LLM 或 VLM 裁判打分可信</h3>
+<details class="answer" open><summary>参考回答与追问</summary>
+<p><strong>把裁判作为需要独立验收的模型。</strong>先建立与训练数据隔离的人工参考集，覆盖业务分布、困难样本和新生成器；检验评分相关、含平局偏好准确率、分场景偏差、重复评分稳定性及跨域表现。</p>
+<ul><li><strong>减偏：</strong>固定维度、量表和锚点，盲化模型名称；成对比较对调 A/B，冲突样本复核；检查位置、冗长与模型自偏好。<a class="source-ref" href="#ref-judge">[4]</a></li><li><strong>重证据：</strong>输出维度分、可核对的时间段/区域和简短理由；看不到证据时允许“不确定/不可判断”。理由详细不代表正确，均匀抽帧可能漏掉关键动作。</li><li><strong>防注入：</strong>待评文本、字幕、图中文字都可能夹带“请给满分”；隔离待评内容与规则，加入攻击样本。JSON 校验保证格式，不能保证裁判没被操纵。</li></ul>
+<p class="followup"><b>追问“能否完全替代人工”：</b>机器覆盖规模化常规样本；低置信度、裁判分歧、分布外和高风险样本交给人工。主动学习按不确定性与多样性选样，同时保留随机抽检，避免只标困难样本导致分布偏移。</p>
+</details></article>
+
+<article class="study-card" id="q6" data-tags="p0">
+<div class="card-top"><span class="badge">P0 · 多模态基础</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q6 CLIP、BLIP 和生成式 VLM 怎么用于质量评估</h3>
+<details class="answer" open><summary>参考回答与追问</summary>
+<p><strong>CLIP：</strong>图像、文本双编码器，通过对比学习映射到可比空间，可快速筛查粗粒度图文相关性；对计数、否定、空间关系和时间顺序需要额外验证。图文相似不代表画质、物理或指令都正确。<a class="source-ref" href="#ref-clip">[5]</a></p>
+<p><strong>BLIP / BLIP-2：</strong>BLIP 结合图文理解与生成目标；BLIP-2 用 Q-Former 连接冻结的视觉编码器和语言模型。常见生成式 VLM 可概括为“视觉编码器 + 连接模块 + LLM”，具体架构不完全相同。<a class="source-ref" href="#ref-blip">[6]</a></p>
+<p><strong>组合方式：</strong>质量/运动算子处理明确的低层现象，VLM 做语义与关系判断，领域 RM 学习人类细粒度偏好。视频需保留时间信息；全局采样用于覆盖，关键动作再密集采样或看片段，预算和抽帧策略也要固定。</p>
+<p class="pitfall"><b>补一句：</b>传统 VQA 里“有参考/无参考”指是否需要参考视觉内容。自由文生视频往往没有逐像素真值，PSNR/SSIM 不适合作为主指标；FID/FVD 主要比较集合分布，也不能直接诊断某一条视频的具体失败。</p>
+<p><a href="#scorer-models">进入打分模型架构图：比较双塔、VLM 奖励头与生成式评分 →</a></p>
+</details></article>
+</section>
+
+<section class="section" id="metrics-lab" aria-labelledby="metrics-lab-title">
+<div class="section-head"><h2 id="metrics-lab-title"><small>04</small>指标交互实验室</h2><span>先理解分数，再背公式</span></div>
+<article class="study-card" id="metric-workbench" data-tags="p0 visual">
+<div class="card-top"><span class="badge">P0 · 计算与边界</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>把“相关性、偏好、置信区间、相似度”算给面试官看</h3>
+<details class="answer" open><summary>展开交互演算与面试口述</summary>
+<p class="ml-intro">所有数据都是<strong>教学玩具例</strong>，与简历里的实验结果无关。点击预设或拖动滑杆，观察“一个指标变好，另一个可能不变”。动画需要主动点击播放；公式、初始结果和解释可直接阅读。</p>
+<div class="ml-tabs" role="tablist" aria-label="选择指标实验">
+<button type="button" class="ml-tab" id="ml-tab-correlation" role="tab" aria-controls="ml-panel-correlation" aria-selected="true" tabindex="0">1 相关性与误差</button>
+<button type="button" class="ml-tab" id="ml-tab-preference" role="tab" aria-controls="ml-panel-preference" aria-selected="false" tabindex="-1">2 偏好、胜率与 BT</button>
+<button type="button" class="ml-tab" id="ml-tab-uncertainty" role="tab" aria-controls="ml-panel-uncertainty" aria-selected="false" tabindex="-1">3 MOS 与置信区间</button>
+<button type="button" class="ml-tab" id="ml-tab-text" role="tab" aria-controls="ml-panel-text" aria-selected="false" tabindex="-1">4 BLEU 与 ROUGE</button>
+<button type="button" class="ml-tab" id="ml-tab-feature" role="tab" aria-controls="ml-panel-feature" aria-selected="false" tabindex="-1">5 CLIP 与分布距离</button>
+</div>
+<p class="ml-note">键盘：Tab 进入页签，← / → 切换，Home / End 跳至首尾；滑杆可用方向键调整。</p>
+
+<div class="ml-panel" id="ml-panel-correlation" role="tabpanel" aria-labelledby="ml-tab-correlation" tabindex="0">
+<h4 class="ml-print-label">1 · 相关性不等于绝对分数准确</h4>
+<div class="ml-controls" aria-label="选择评分预设"><button type="button" class="ml-btn" data-ml-preset="default" aria-pressed="true">默认：交换两条</button><button type="button" class="ml-btn" data-ml-preset="shift" aria-pressed="false">整体加 2 分</button><button type="button" class="ml-btn" data-ml-preset="monotone" aria-pressed="false">单调非线性</button><button type="button" class="ml-btn" data-ml-preset="reverse" aria-pressed="false">完全倒序</button><button type="button" class="ml-btn" data-ml-preset="ties" aria-pressed="false">出现并列</button></div>
+<p id="ml-correlation-insight" class="ml-note" aria-live="polite">默认只交换第 3、4 条的排序：10 个样本对中有 1 个逆序。</p>
+<div class="ml-stat-grid" aria-live="polite"><div class="ml-stat">PLCC ↑<strong id="ml-plcc">0.900</strong></div><div class="ml-stat">SRCC ↑<strong id="ml-srcc">0.900</strong></div><div class="ml-stat">Kendall τ-b ↑<strong id="ml-tau">0.800</strong></div><div class="ml-stat">MAE ↓<strong id="ml-mae">0.400</strong></div><div class="ml-stat">RMSE ↓<strong id="ml-rmse">0.632</strong></div><div class="ml-stat">一致 / 逆序对<strong id="ml-pair-count">9 / 1</strong></div></div>
+<div class="ml-grid"><div>
+<figure class="ml-figure"><svg class="ml-svg" id="ml-scatter" viewBox="0 0 520 330" role="img" aria-label="默认评分散点图：人评1到5，模型评分为1、2、4、3、5"><line x1="65" y1="275" x2="480" y2="275" stroke="#84998d"/><line x1="65" y1="275" x2="65" y2="30" stroke="#84998d"/><line x1="90" y1="255" x2="450" y2="45" stroke="#a7c4b2" stroke-dasharray="5 5"/><g fill="#176858"><circle cx="90" cy="255" r="7"/><circle cx="180" cy="203" r="7"/><circle cx="270" cy="98" r="7"/><circle cx="360" cy="150" r="7"/><circle cx="450" cy="45" r="7"/></g><text x="270" y="318" text-anchor="middle" font-size="15" fill="#39564a">人评 MOS y →</text><text x="68" y="20" font-size="15" fill="#39564a">模型评分 x ↑</text></svg><figcaption>虚线 y=x 表示绝对分数一致。这里沿用公式记号：x 为预测，y 为人评；图的横轴放人评，纵轴放预测。</figcaption></figure>
+<div class="ml-table-wrap"><table class="ml-table"><thead><tr><th>样本</th><th>人评 y</th><th>预测 x</th><th>秩 R(y)</th><th>秩 R(x)</th></tr></thead><tbody id="ml-rank-body"><tr><td>A</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>B</td><td>2</td><td>2</td><td>2</td><td>2</td></tr><tr><td>C</td><td>3</td><td>4</td><td>3</td><td>4</td></tr><tr><td>D</td><td>4</td><td>3</td><td>4</td><td>3</td></tr><tr><td>E</td><td>5</td><td>5</td><td>5</td><td>5</td></tr></tbody></table></div>
+</div><div>
+<div class="ml-formula-title">PLCC：中心化后，比较线性共同变化</div>
+<div class="ml-formula">r = Σ(xᵢ−x̄)(yᵢ−ȳ) / √[Σ(xᵢ−x̄)² · Σ(yᵢ−ȳ)²]</div>
+<p class="ml-note" id="ml-plcc-step">x̄=ȳ=3；分子9，分母√(10×10)=10，所以 PLCC=0.9。</p>
+<div class="ml-formula-title">SRCC：先转成秩，再计算 Pearson</div>
+<div class="ml-formula">ρ = Pearson(R(x), R(y))<br>无并列时：ρ = 1 − 6Σdᵢ² / [n(n²−1)]</div>
+<p class="ml-note" id="ml-srcc-step">n=5；d 为两种秩的差，Σd²=2，因此 1−12/120=0.9。并列值必须取平均秩。</p>
+<div class="ml-formula-title">Kendall τ-b：数一数全部样本对</div>
+<div class="ml-formula">τ-b = (C−D) / √[(C+D+Tₓ)(C+D+Tᵧ)]</div>
+<p class="ml-note">C/D 是一致/逆序对数，Tₓ/Tᵧ 是<strong>仅预测/仅人评</strong>平局的对数。两边同时平局的对不放入这四项。</p>
+<p id="ml-kendall-step" class="ml-note">C=9、D=1、Tₓ=Tᵧ=0，所以 τ-b=8/10=0.8。</p>
+<div class="ml-pairs" id="ml-kendall-pairs"><span class="ml-pair ml-correct">其余9对一致</span><span class="ml-pair ml-wrong">C↔D 逆序</span></div>
+<div class="ml-formula">MAE = Σ|xᵢ−yᵢ|/n<br>RMSE = √[Σ(xᵢ−yᵢ)²/n]</div>
+<p class="ml-note" id="ml-error-step">绝对误差之和2，平方误差之和2；MAE=2/5=0.4，RMSE=√(2/5)=0.632。</p>
+</div></div>
+<p class="pitfall"><strong>面试一句话：</strong>PLCC 看线性，SRCC 看单调排序，Kendall 看样本对顺序；绝对误差另看 MAE/RMSE。先统一高低方向和量纲，校准映射只在训练/验证集拟合；常数评分的相关系数没有定义。</p>
+<p class="ml-source">公式核对：<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html" target="_blank" rel="noreferrer">Pearson</a> · <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html" target="_blank" rel="noreferrer">Spearman</a> · <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kendalltau.html" target="_blank" rel="noreferrer">Kendall τ-b</a>。</p>
+</div>
+
+<div class="ml-panel" id="ml-panel-preference" role="tabpanel" aria-labelledby="ml-tab-preference" tabindex="0" hidden>
+<h4 class="ml-print-label">2 · 评分器准确率、模型胜率、训练损失分开看</h4>
+<div class="ml-grid"><div class="ml-box"><h4>① 评分器：A/B 谁更好，判断对了吗？</h4>
+<label class="ml-control" for="ml-epsilon">平局阈值 ε：<output id="ml-epsilon-value" class="ml-value" for="ml-epsilon">0.20</output><input id="ml-epsilon" class="ml-slider" type="range" min="0" max="0.6" step="0.05" value="0.2"></label>
+<div class="ml-formula">gᵢ = score(Aᵢ)−score(Bᵢ)<br>gᵢ&gt;ε → A胜；gᵢ&lt;−ε → A负；否则预测平局<br>Acc = 判断正确的有效对数 / 有效对数</div>
+<div class="ml-table-wrap"><table class="ml-table ml-tiny-table"><thead><tr><th>对</th><th>分差g</th><th>人评GT</th><th>模型判断</th></tr></thead><tbody id="ml-preference-body"><tr><td>1</td><td>2.00</td><td>A胜</td><td>A胜 ✓</td></tr><tr><td>2</td><td>0.10</td><td>A胜</td><td>平局 ×</td></tr><tr><td>3</td><td>−2.00</td><td>A负</td><td>A负 ✓</td></tr><tr><td>4</td><td>0.05</td><td>平局</td><td>平局 ✓</td></tr><tr><td>5</td><td>0.00</td><td>平局</td><td>平局 ✓</td></tr><tr><td>6</td><td>−0.30</td><td>A胜</td><td>A负 ×</td></tr></tbody></table></div>
+<p id="ml-preference-accuracy" aria-live="polite"><strong>含 GT 平局的三分类准确率：4/6=66.7%。</strong><br>去除 GT 平局的严格准确率：2/4=50.0%。</p>
+<p class="ml-note">本例预测平局与非平局 GT 不匹配就算错，不给半分。含平局与去平局是不同任务，不能直接比较；ε 应在验证集确定。</p>
+<h4>② 生成模型：人类到底更喜欢 A 还是 B？</h4>
+<div class="ml-formula">GT 中 W=3、L=1、T=2，N=W+L+T=6<br>严格胜率 W/N = 50.0%<br>平局半分胜率 (W+0.5T)/N = 66.7%<br>去平局胜率 W/(W+L) = 75.0%</div>
+<p class="ml-note">这里 W/L/T 来自<strong>人类 GT</strong>，拖动评分器阈值不会改变。胜率必须附对手、样本范围、平局处理与区间，不能当评分器准确率。</p>
+</div><div class="ml-box"><h4>③ BT：用偏好训练 Reward Model</h4>
+<p>同一 prompt 的两个输出，共用同一个奖励网络；得到两个标量后做差。人类更喜欢的记作 w，另一个记作 l。</p>
+<div class="ml-formula">Δ = rθ(prompt,w)−rθ(prompt,l)<br>P(w≻l)=σ(Δ)=1/(1+e<sup>−Δ</sup>)<br>L = −mean[log σ(Δ)] = mean[softplus(−Δ)]</div>
+<label class="ml-control" for="ml-bt-delta">奖励差 Δ：<output id="ml-bt-delta-value" class="ml-value" for="ml-bt-delta">1.00</output><input id="ml-bt-delta" class="ml-slider" type="range" min="-3" max="3" step="0.1" value="1"></label>
+<div class="ml-stat-grid"><div class="ml-stat">P(人类优选项更好)<strong id="ml-bt-probability">0.731</strong></div><div class="ml-stat">单对 BT loss ↓<strong id="ml-bt-loss">0.313</strong></div><div class="ml-stat">Δ=0 时概率<strong>0.500</strong></div></div>
+<figure class="ml-figure"><svg class="ml-svg" id="ml-bt-plot" viewBox="0 0 520 285" role="img" aria-label="BT sigmoid曲线：奖励差越大，优选项胜出的预测概率越高"><text x="30" y="35" font-size="16" fill="#39564a">Δ=1 → 概率0.731 → loss 0.313</text><line x1="50" y1="235" x2="490" y2="235" stroke="#84998d"/><path d="M50 225 C180 220 180 55 490 40" fill="none" stroke="#176858" stroke-width="4"/></svg><figcaption>Δ 增大，模型更支持人类偏好，BT loss 降低。曲线表示模型假设下的预测概率，需另做概率校准。</figcaption></figure>
+<p class="pitfall">奖励整体加常数不改变偏好；奖励“3分”不等于 MOS 3分。普通 BT 训练假设有胜负标签，不能把平局样本随意指定一边为 winner。</p>
+<p class="ml-source">原理：<a href="https://arxiv.org/html/2203.02155" target="_blank" rel="noreferrer">InstructGPT §3 奖励建模</a>。</p>
+</div></div>
+</div>
+
+<div class="ml-panel" id="ml-panel-uncertainty" role="tabpanel" aria-labelledby="ml-tab-uncertainty" tabindex="0" hidden>
+<h4 class="ml-print-label">3 · 人评均值会波动，版本差异也要报区间</h4>
+<div class="ml-grid"><div class="ml-box"><h4>单条视频：MOS 的均值 t 区间</h4>
+<p>5 位独立评测员评分：<strong>[4, 4, 5, 3, 4]</strong>。</p>
+<div class="ml-formula">MOS = Σrⱼ/m = 20/5 = 4<br>s = √[Σ(rⱼ−MOS)²/(m−1)] = √0.5 = 0.7071<br>SE = s/√m = 0.3162<br>95% CI = MOS ± t<sub>0.975,m−1</sub>·SE<br>= 4 ± 2.7764×0.3162 = [3.1220, 4.8780]</div>
+<p class="ml-note">rⱼ 是第 j 人评分，m=5，s 为样本标准差，SE 为均值标准误；t 临界值自由度为 m−1。本例假设独立评分，均值 t 区间为教学近似；5档、小样本时应检查适用性。</p>
+<p><strong>95% 置信度：</strong>反复采样并按同一方法构造区间，长期约 95% 的区间覆盖真实均值。</p>
+<p class="pitfall">不能说“这次真实均值有 95% 概率在这个区间”；更不能把同一人重复打分当独立评测员。</p>
+<details class="ml-inline-details"><summary>人评可靠性还看什么？</summary><p>ICC 要注明模型、单人/多人均值、绝对一致/一致性及区间。1–5有序评分可考虑 ordinal Krippendorff α=1−Dₒ/Dₑ，比较实际分歧与机会分歧；ordinal 距离基于类别累计频率，简单平方差属于 interval 距离。高 Pearson 不代表评测员绝对打分一致。</p></details>
+<p class="ml-source"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm" target="_blank" rel="noreferrer">NIST 均值置信区间</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/4913118/" target="_blank" rel="noreferrer">ICC 选择与报告</a> · <a href="https://repository.upenn.edu/server/api/core/bitstreams/0421f871-f005-4322-b06a-a66bec328e3b/content" target="_blank" rel="noreferrer">Krippendorff α 原作者说明</a>。</p>
+</div><div class="ml-box"><h4>版本比较：按 prompt 做配对 bootstrap</h4>
+<p>8 个独立 prompt 的 A−B 差值：<strong>[−2, −1, 0, 0, 1, 2, 3, 5]</strong>，均值为 +1；每次<strong>有放回</strong>抽 8 个 prompt，重算均值。</p>
+<div class="ml-prompt-row" id="ml-bootstrap-prompts"><span class="ml-prompt"><small>P1</small>−2</span><span class="ml-prompt"><small>P2</small>−1</span><span class="ml-prompt"><small>P3</small>0</span><span class="ml-prompt"><small>P4</small>0</span><span class="ml-prompt"><small>P5</small>1</span><span class="ml-prompt"><small>P6</small>2</span><span class="ml-prompt"><small>P7</small>3</span><span class="ml-prompt"><small>P8</small>5</span></div>
+<div class="ml-controls"><button type="button" class="ml-btn" id="ml-bootstrap-play" aria-pressed="false">播放一次重采样</button><button type="button" class="ml-btn" id="ml-bootstrap-reset">重置</button></div>
+<p class="ml-sample" id="ml-bootstrap-sample" aria-live="polite">等待开始：观察某个 prompt 会被抽到多次，另一个可能一次也没出现。</p><div class="ml-progress" aria-hidden="true"><span id="ml-bootstrap-progress"></span></div>
+<p class="ml-note ml-animation-help">可暂停并继续。系统启用“减少动态效果”时，直接显示整次抽样结果；单次动画只演示过程，不估计区间。</p>
+<figure class="ml-figure"><svg class="ml-svg" id="ml-bootstrap-ci" viewBox="0 0 520 240" role="img" aria-label="正确按prompt重采样区间为负0.375到2.5；错误把完全相关的帧当独立区间为0.4167到1.6042"><text x="24" y="30" font-size="15" fill="#39564a">相同均值 +1，独立样本单位决定区间</text><line x1="65" y1="180" x2="480" y2="180" stroke="#84998d"/><line x1="145" y1="55" x2="145" y2="185" stroke="#b8c7bd" stroke-dasharray="4 4"/><line x1="100" y1="85" x2="420" y2="85" stroke="#176858" stroke-width="6"/><line x1="200" y1="140" x2="340" y2="140" stroke="#b46c40" stroke-width="6"/><text x="24" y="220" font-size="14" fill="#39564a">正确区间跨 0；伪重复让区间虚窄，甚至改变结论。</text></svg><figcaption>下方数字是该离散例对所有可能抽样均值的精确百分位计算，不受动画的随机结果影响。</figcaption></figure>
+<div class="ml-table-wrap"><table class="ml-table ml-tiny-table"><thead><tr><th>重采样单位</th><th>Bootstrap SE</th><th>95% percentile CI</th></tr></thead><tbody><tr><td>正确：8个prompt</td><td>0.7500</td><td>[−0.3750, 2.5000]</td></tr><tr><td>错误：48条帧记录</td><td>0.3062</td><td>[0.4167, 1.6042]</td></tr></tbody></table></div>
+<p class="pitfall">错误组假设<strong>每个 prompt 复制成 6 帧且差值完全相同、完全相关</strong>，却把 48 帧当独立样本。此时 SE 被压成原来的 1/√6；视频帧数不等于独立 prompt 数。</p>
+<div class="ml-formula">dᵢ = score(Aᵢ)−score(Bᵢ)<br>每次抽同一组 prompt 索引 → 重算 Δ* = mean(dᵢ*)<br>区间 = 重采样统计量的 2.5%、97.5% 分位数</div>
+<p class="ml-note">这里用 percentile 法便于教学；实际选择 percentile/BCa 等方法应固定协议。同源 prompt 的多条生成可按 prompt 成簇重采样；比较两模型相关系数时也要共用重采样索引。</p>
+<p class="ml-source"><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html" target="_blank" rel="noreferrer">SciPy bootstrap：paired=True 的含义</a>。</p>
+</div></div>
+</div>
+
+<div class="ml-panel" id="ml-panel-text" role="tabpanel" aria-labelledby="ml-tab-text" tabindex="0" hidden>
+<h4 class="ml-print-label">4 · BLEU/ROUGE 看文本重叠，不能证明视频语义正确</h4>
+<div class="ml-controls"><button type="button" class="ml-btn" data-ml-text="default" aria-pressed="true">改动一个词</button><button type="button" class="ml-btn" data-ml-text="roles" aria-pressed="false">主客体反转</button></div>
+<div class="ml-grid"><div class="ml-box"><h4>固定英文词级分词例</h4><p class="ml-note">参考：</p><div class="ml-token-row" id="ml-reference-tokens"><span class="ml-token">a</span><span class="ml-token">cat</span><span class="ml-token">is</span><span class="ml-token">on</span><span class="ml-token">mat</span></div><p class="ml-note">候选：</p><div class="ml-token-row" id="ml-candidate-tokens"><span class="ml-token">a</span><span class="ml-token">cat</span><span class="ml-token ml-token-change">sits</span><span class="ml-token">on</span><span class="ml-token">mat</span></div>
+<div class="ml-stat-grid" aria-live="polite"><div class="ml-stat">BLEU-2 ↑<strong id="ml-bleu2">0.632</strong></div><div class="ml-stat">ROUGE-1 F1 ↑<strong id="ml-rouge1">0.800</strong></div><div class="ml-stat">ROUGE-L F1 ↑<strong id="ml-rougel">0.800</strong></div></div><p id="ml-text-insight">“is”换成“sits”，一元词命中4/5；相邻二元组命中2/4。</p>
+<p class="ml-note">绿色只表示在参考中有可匹配的一元词，<strong>不表示语义正确</strong>。本例固定小写、空格分词、单参考、句级 BLEU-2、均匀权重、无平滑。</p>
+</div><div><h4>按三步算</h4>
+<ol class="ml-steps"><li><strong>BLEU 的 clipped precision：</strong>对每个 n-gram，命中数最多为参考中的出现次数，避免重复刷分。<span id="ml-ngram-count">p₁=4/5=0.8，p₂=2/4=0.5。</span></li><li><strong>短句惩罚与几何平均：</strong>c/r 是候选/参考长度；pₙ 是 n 元组精确率，wₙ 为权重，本例两者均为 1/2。<div class="ml-formula">BP=1（c&gt;r），否则 e<sup>1−r/c</sup><br>BLEU-2=BP×exp[½log p₁+½log p₂]<br><span id="ml-bleu-step">=1×√(0.8×0.5)=0.632456</span></div></li><li><strong>ROUGE 的召回与 F1：</strong>LCS 为保持顺序的最长公共子序列，允许中间跳词；这里 F1 使用 β=1。<div class="ml-formula">ROUGE-1：P=一元命中/c，R=一元命中/r<br>ROUGE-L：P=LCS/c，R=LCS/r<br>F1=2PR/(P+R)</div><p id="ml-rouge-step">一元命中4，LCS长度4，c=r=5；两种F1均为0.8。</p></li></ol>
+<p class="pitfall">这里是 BLEU-2，不能标成 BLEU-4；默认句例的高阶 n-gram 零命中会使无平滑 BLEU-4 为0。真实报告应注明分词、句级/语料级、参考数量、大小写、平滑及实现版本。</p>
+</div></div>
+<p><strong>岗位答法：</strong>文本答案、描述和摘要可以用 BLEU/ROUGE 作补充；图像/视频本身的质量、数量关系与时序遵循，需要视觉证据和专用评测，不能只拿文本重叠分数证明。</p>
+<p class="ml-source"><a href="https://aclanthology.org/P02-1040/" target="_blank" rel="noreferrer">BLEU 原论文</a> · <a href="https://aclanthology.org/W04-1013/" target="_blank" rel="noreferrer">ROUGE 原论文</a>。</p>
+</div>
+
+<div class="ml-panel" id="ml-panel-feature" role="tabpanel" aria-labelledby="ml-tab-feature" tabindex="0" hidden>
+<h4 class="ml-print-label">5 · 双塔语义相似度，与集合分布距离</h4>
+<div class="ml-grid"><div class="ml-box"><h4>CLIPScore：图文向量夹角</h4>
+<div class="ml-formula">图像 → 图像编码器 → 向量 v ┐<br>文本 → 文本编码器 → 向量 t ┴→ L2归一化 → 点积<br>cos(v,t)=(v·t)/(‖v‖‖t‖)<br>原文 CLIP-S=2.5×max(cos(v,t),0)</div>
+<label class="ml-control" for="ml-cosine">图文余弦 cos：<output id="ml-cosine-value" class="ml-value" for="ml-cosine">0.30</output><input id="ml-cosine" class="ml-slider" type="range" min="-1" max="1" step="0.01" value="0.3"></label>
+<p>原文 CLIPScore：<output class="ml-large" id="ml-clip-score" for="ml-cosine">0.750</output></p>
+<figure class="ml-figure"><svg class="ml-svg" id="ml-clip-vectors" viewBox="0 0 520 270" role="img" aria-label="二维单位向量夹角示意，余弦0.3，CLIPScore0.75"><circle cx="215" cy="180" r="120" fill="none" stroke="#dce3dd"/><line x1="215" y1="180" x2="335" y2="180" stroke="#176858" stroke-width="5"/><line x1="215" y1="180" x2="251" y2="65" stroke="#b46c40" stroke-width="5"/><text x="355" y="186" font-size="17" fill="#176858">图像v</text><text x="265" y="60" font-size="17" fill="#9b5a35">文本t</text><text x="340" y="235" font-size="15" fill="#39564a">夹角≈72.5°</text></svg><figcaption>图只用二维单位向量解释夹角；真实 CLIP 的向量维数由所用骨干决定，不能从二维图推断语义能力。</figcaption></figure>
+<p class="pitfall">2.5 是原论文缩放常数，<strong>理论范围是 [0,2.5]</strong>，不是严格[0,1]。CLIP 的原始检索 logits=exp(logit_scale)×cos；有些库又用100×max(cos,0)，三者不能混报。</p>
+<p class="ml-note">CLIP 是对比学习双塔；CLIPScore直接复用其匹配能力，没有专门学习“所有维度的质量”。复杂数量、主客体关系、物理及时序可能失效，视频逐帧平均还会丢掉顺序。</p>
+<p class="ml-source"><a href="https://arxiv.org/html/2104.08718" target="_blank" rel="noreferrer">CLIPScore §3</a> · <a href="https://github.com/openai/CLIP" target="_blank" rel="noreferrer">CLIP 官方实现</a>。</p>
+</div><div class="ml-box"><h4>FID/FVD：两个样本集合在特征空间有多远</h4>
+<div class="ml-formula">真实样本 → 固定编码器 → 均值 μᵣ / 协方差 Σᵣ<br>生成样本 → 同一编码器 → 均值 μg / 协方差 Σg<br>FID：通常为 Inception 图像特征<br>原始 FVD：I3D 视频特征</div>
+<p><strong>1D 高斯玩具例：</strong>固定真实分布 μᵣ=0、σᵣ=1，调节生成分布。σ 是标准差；多维公式里的 Σ 是协方差矩阵。</p>
+<label class="ml-control" for="ml-gaussian-mean">生成均值 μg：<output id="ml-gaussian-mean-value" class="ml-value" for="ml-gaussian-mean">1.00</output><input id="ml-gaussian-mean" class="ml-slider" type="range" min="-3" max="3" step="0.1" value="1"></label>
+<label class="ml-control" for="ml-gaussian-sigma">生成标准差 σg：<output id="ml-gaussian-sigma-value" class="ml-value" for="ml-gaussian-sigma">2.00</output><input id="ml-gaussian-sigma" class="ml-slider" type="range" min="0.25" max="3" step="0.05" value="2"></label>
+<div class="ml-formula" id="ml-frechet-step">一维高斯 D²=(μᵣ−μg)²+(σᵣ−σg)²<br>=(0−1)²+(1−2)²=2.000</div>
+<figure class="ml-figure"><svg class="ml-svg" id="ml-gaussian-plot" viewBox="0 0 520 270" role="img" aria-label="一维高斯特征分布示意：真实分布均值0标准差1，生成分布均值1标准差2"><line x1="40" y1="220" x2="490" y2="220" stroke="#84998d"/><path d="M70 219 C170 218 170 55 265 45 C340 50 340 218 440 219" fill="none" stroke="#176858" stroke-width="3"/><path d="M60 219 C130 215 190 120 290 120 C390 120 440 210 490 219" fill="none" stroke="#b46c40" stroke-width="3"/></svg><figcaption>绿：真实 N(0,1²)；橙：生成 N(μg,σg²)。横轴是1维特征值，纵轴是概率密度。示例得分2不是实际图像/视频分数。</figcaption></figure>
+<details class="ml-inline-details"><summary>展开多维公式</summary><div class="ml-formula">D²=‖μᵣ−μg‖²+Tr[Σᵣ+Σg−2(Σᵣ<sup>½</sup>ΣgΣᵣ<sup>½</sup>)<sup>½</sup>]</div><p>Tr 是矩阵迹，½ 是矩阵平方根；一维时协方差为 σ²，所以式子化为上面的均值差平方＋标准差差平方。</p></details>
+<p class="pitfall">这类指标比较<strong>样本集合分布</strong>，无法给单条视频判定 prompt 遵循。必须固定编码器、样本数、预处理与视频采样协议；高斯近似、有限样本偏差和特征域差异都会影响结论。</p>
+<p class="ml-source"><a href="https://arxiv.org/abs/1706.08500" target="_blank" rel="noreferrer">FID 原论文</a> · <a href="https://arxiv.org/abs/1812.01717" target="_blank" rel="noreferrer">FVD 原论文</a>。</p>
+</div></div>
+</div>
+</details></article>
+</section>
+
+
+<section class="section" id="scorer-models" aria-labelledby="scorer-models-title">
+<div class="section-head"><h2 id="scorer-models-title"><small>05</small>打分模型的架构与原理</h2><span>从输入一直追到分数与训练目标</span></div>
+<p class="section-intro">以下是常见基线和近年代表路线，按 2026.10.19 的公开论文、仓库与模型卡核验，不作为使用率或跨场景排名。P0 先看 VideoReward、HPSv3、Q-Align；其他模型用于理解架构差别。</p>
+
+<article class="study-card" id="scorer-map" data-tags="p0 visual">
+<div class="card-top"><span class="badge">P0 · 先建立模型地图</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>两个独立问题：特征怎样融合，分数怎样学出来</h3>
+<details class="answer" open><summary>架构地图与选型</summary>
+<div class="ar-family-map" aria-label="打分架构的五条路线">
+  <div><b>① 独立编码后匹配</b><span>图像塔 ∥ 文本塔</span><em>余弦相似度 / 偏好 logit</em><small>CLIPScore · PickScore · HPSv2</small></div>
+  <div><b>② 编码时跨模态交互</b><span>图像 token → 文本 cross-attention</span><em>融合特征 → MLP 标量</em><small>ImageReward</small></div>
+  <div><b>③ VLM 表征后读分数</b><span>视觉 + 文本 → 多模态 LLM</span><em>hidden state → 奖励头</em><small>HPSv3 · VideoReward</small></div>
+  <div><b>④ 从等级概率读分数</b><span>视觉 + 评分问题 → LMM</span><em>等级 logits → 期望分</em><small>Q-Align</small></div>
+  <div><b>⑤ 生成评价文本与评分</b><span>视觉 + 指令 → VLM 解码</span><em>维度评分 / 解释 / 偏好</em><small>UnifiedReward 2.0 · VideoScore2 · VQ-Insight</small></div>
+</div>
+<p><strong>架构和学习方法要分开：</strong>同一个 VLM 可以接回归头、做等级 token 分类，也可以生成评价文字；SFT、BT 偏好学习和 GRPO 是训练方式。产生解释的模型是否可靠，仍需人工保留集验证，不能从“有推理过程”直接推出“评分更准”。</p>
+<div class="table-wrap"><table class="ar-comparison"><thead><tr><th>代表模型</th><th>输入与基座</th><th>分数从哪来</th><th>你应记住的区别</th></tr></thead><tbody>
+<tr><td>PickScore / HPSv2<br><small>2023 / v2.1 2024</small></td><td>图像 + prompt；CLIP-H/14 双塔</td><td>归一化图文向量点积；偏好训练改变特征空间</td><td>评分时两路 token 不互看；分数缩放以具体 API 为准</td></tr>
+<tr><td>ImageReward<br><small>2023</small></td><td>图像 + prompt；BLIP</td><td>图文 cross-attention 后 [CLS] → MLP</td><td>BT 学相对偏好；归一化奖励可为负</td></tr>
+<tr><td>Q-Align<br><small>ICML 2024 原版</small></td><td>图像 / 抽样帧 + 任务问题；mPLUG-Owl2</td><td>bad 到 excellent 的五等级概率期望</td><td>原生 1–5 连续分；不必自回归生成一个小数</td></tr>
+<tr><td>HPSv3<br><small>ICCV 2025</small></td><td>图像 + prompt；Qwen2-VL-7B</td><td>联合表征 → MLP → μ、σ；推理用 μ</td><td>已不是 HPSv2 双塔；σ 不等于已校准的置信区间</td></tr>
+<tr><td>VideoReward<br><small>VideoAlign 2025</small></td><td>视频 + prompt；Qwen2-VL-2B</td><td>[VQ] / [MQ] / [TA] 的 hidden states → 共享线性头</td><td>三维评分不等于三个独立头；token 顺序控制文本可见性</td></tr>
+<tr><td>UnifiedReward 2.0<br><small>本文采用 qwen-7b checkpoint</small></td><td>有序多图 + 任务；Qwen2.5-VL-7B</td><td>按任务生成结构化分数或两候选比较</td><td>2.0 与 Think 分支分开；抽帧和维度依脚本而异</td></tr>
+<tr><td>VideoScore2<br><small>2025</small></td><td>视频 + prompt；Qwen2.5-VL-7B</td><td>生成解释与 VQ / TA / PC 评分</td><td>SFT → GRPO；不能套用第一代五维或 Q-Align 的期望公式</td></tr>
+<tr><td>VQ-Insight<br><small>2025 / AAAI 2026</small></td><td>视频与任务输入；Qwen2.5-VL-7B</td><td>推理式评分 / 比较；渐进式 RL 强化时序判断</td><td>图像 warm-up → 视频任务 / 时序学习 → 与生成器交替优化</td></tr>
+</tbody></table></div>
+<p class="pitfall"><b>选型原则：</b>技术质量、语义、偏好、运动各有侧重；不要把不同模型的原始分数直接相加。FID/FVD、VBench 属于指标或评测套件，也不应与“一个学出来的奖励模型”混称。</p>
+<p><strong>与你的简历接：</strong>“我做过的 CoT+Score 与回归头比较，对应输出方式和成本的取舍；排序损失加回归目标，对应相对偏好与尺度约束。是否有效看人评一致性、跨生成器泛化和下游独立验证。”</p>
+</details></article>
+
+<article class="study-card" id="architecture-workbench" data-tags="p0 visual">
+<div class="card-top"><span class="badge">P0 · 可播放的架构图</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>沿着数据流走一遍，解释每个分数是怎么产生的</h3>
+<details class="answer" open><summary>选择模型并逐步演示</summary>
+<div class="ar-model-tabs" role="tablist" aria-label="选择打分模型">
+<button type="button" id="ar-tab-dual" role="tab" aria-controls="ar-model-panel" aria-selected="false" data-model="dual">PickScore / HPSv2</button>
+<button type="button" id="ar-tab-imagereward" role="tab" aria-controls="ar-model-panel" aria-selected="false" data-model="imagereward">ImageReward</button>
+<button type="button" id="ar-tab-qalign" role="tab" aria-controls="ar-model-panel" aria-selected="false" data-model="qalign">Q-Align</button>
+<button type="button" id="ar-tab-hpsv3" role="tab" aria-controls="ar-model-panel" aria-selected="false" data-model="hpsv3">HPSv3</button>
+<button type="button" id="ar-tab-videoreward" role="tab" aria-controls="ar-model-panel" aria-selected="true" data-model="videoreward">VideoReward</button>
+<button type="button" id="ar-tab-unified" role="tab" aria-controls="ar-model-panel" aria-selected="false" data-model="unified">UnifiedReward 2.0</button>
+<button type="button" id="ar-tab-videoscore2" role="tab" aria-controls="ar-model-panel" aria-selected="false" data-model="videoscore2">VideoScore2</button>
+<button type="button" id="ar-tab-vqinsight" role="tab" aria-controls="ar-model-panel" aria-selected="false" data-model="vqinsight">VQ-Insight</button>
+</div>
+<div id="ar-model-panel" role="tabpanel" aria-labelledby="ar-tab-videoreward" tabindex="0">
+<div class="ar-heading"><div><h4 id="ar-title">VideoReward · 三维奖励如何避免文本泄漏</h4><p id="ar-subtitle">Qwen2-VL-2B · 2025 · 视觉质量 VQ / 运动质量 MQ / 文本对齐 TA</p></div><span class="ar-demo-tag">结构示意，不是实际 attention 或测评分数</span></div>
+<div class="ar-controls"><button type="button" class="tool-btn" id="ar-play" aria-pressed="false">播放数据流</button><button type="button" class="tool-btn" id="ar-prev">上一步</button><button type="button" class="tool-btn" id="ar-next">下一步</button><span id="ar-step-count" aria-live="polite">步骤 1 / 5</span></div>
+<div id="ar-step-buttons" class="ar-steps" role="group" aria-label="架构演示步骤"></div>
+<div class="ar-viewport"><svg id="ar-diagram" viewBox="0 0 940 355" role="img" aria-labelledby="ar-svg-title ar-svg-desc"><title id="ar-svg-title">VideoReward 架构</title><desc id="ar-svg-desc">视频编码后与评分 token、prompt 一起进入因果语言模型；不同 token 的 hidden states 经共享线性头生成三维分数。</desc><text x="25" y="50">视频 → 视觉编码 → 因果 VLM → 评分 token 的 hidden state → 共享线性头</text></svg></div>
+<p class="ar-scroll-note">窄屏可横向滑动架构图；下方分步说明包含同样的信息。</p>
+<div class="ar-step-detail" aria-live="polite"><b id="ar-stage-title">1 输入与维度定义</b><p id="ar-stage-text">视频质量和运动质量要看视频证据，文本对齐需要同时看视频和 prompt。</p></div>
+<div id="ar-token-mask" class="ar-special" hidden></div>
+<div id="ar-grade-demo" class="ar-special" hidden><h4>五等级概率怎样变成连续分</h4><p>顺序为 bad / poor / fair / good / excellent。以下概率是教学构造，非真实模型输出。</p><label class="ar-slider-label" for="ar-excellent">只改变 excellent 的 logit 偏移 <output id="ar-excellent-value">0.0</output></label><input id="ar-excellent" type="range" min="-3" max="3" step="0.1" value="0"><div id="ar-grade-bars" class="ar-grade-bars"></div><p class="formula" id="ar-grade-equation">1×0.05 + 2×0.10 + 3×0.20 + 4×0.40 + 5×0.25 = 3.70</p><p class="ar-small">先在五个等级 token 内重做 softmax，再求期望；不是把整个词表的原始概率直接加权，也不是直接取最高概率等级 4。</p></div>
+<div class="ar-facts"><div><h4>训练如何把分数教出来</h4><p id="ar-training">用人类成对偏好监督，显式处理胜 / 平 / 负，学习各维度的相对质量。</p></div><div><h4>面试时补上的局限</h4><p id="ar-limit">模型分数尺度不天然等于 MOS；跨场景、抽帧变化和 reward hacking 仍要独立验证。</p></div></div>
+<p id="ar-speech" class="ar-speech"><strong>30 秒话术：</strong>先确定三维各自需要什么信息，再设计 token 可见性与读出；最后用人类偏好训练并在独立样本上校验。</p>
+<p class="ar-source" id="ar-source">来源：<a href="https://arxiv.org/abs/2501.13918" target="_blank" rel="noopener noreferrer">VideoAlign / VideoReward 原论文</a></p>
+</div>
+<div class="ar-recent"><h4>2026 更新怎么记</h4><p id="ar-recent-text">HPSv3++、Q-ReAlign 和 UnifiedReward 的新基座变体可作为延伸阅读。讲架构时先报具体版本 / checkpoint，再谈输入协议、输出维度和训练方法，不把新旧论文拼成一个模型。</p></div>
+<div class="ar-print-all" id="ar-print-all"></div>
+</details></article>
+</section>
+
+
+<section class="section" id="projects" aria-labelledby="projects-title">
+<div class="section-head"><h2 id="projects-title"><small>06</small>简历项目追问</h2><span>每题按问题 实现 验证 局限来讲</span></div>
+<article class="study-card" id="q7" data-tags="p0 project quick">
+<div class="card-top"><span class="badge">P0 · 腾讯 RM 与迭代</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q7 你的 Reward Model 怎么训，为什么能推动生成优化</h3>
+<details class="answer" open><summary>项目回答骨架</summary>
+<p class="oral">业务问题是通用评分对影视质感与运动合理性的区分不够细。我基于 Qwen 系列 VLM 构建领域 Reward Model，数据先用教师蒸馏扩大覆盖，再用人工精标校准；比较 CoT+Score 和标量回归方案，并结合绝对分数与相对偏好学习。验证时同时看 SRCC、偏好准确率和分场景表现。接入 Wan 的 Flow-GRPO 后，我会再用独立评测和盲评检查目标收益、语义和运动回归，防止训练只把自己的奖励分推高。</p>
+<p><strong>三处要讲透：</strong>CoT+Score 便于诊断，但有文本生成开销；回归头直接输出分数，吞吐优势需同硬件实测。排序学习关注“哪个更好”，回归关注分数尺度；普通 BT 用分数差经 sigmoid 建模胜出概率，平局要用实际实现的专门处理。RL 中由 RM 给每条 rollout 标量奖励，再算组内相对优势，人工偏好对并非直接作为 GRPO 优势值。</p>
+<p><strong>闭环例子：</strong>你已有材料记录了通过遮挡、降低运动、偏色等方式迎合奖励的风险。回答时讲清“实际观察 → 分维归因 → KL/SFT、多奖励或难例回灌 → 独立回归验证”；仅把自己确实做过的措施说成已完成。</p>
+<p class="followup"><b>今晚核对：</b>所用基座版本、你负责的数据/训练模块、平局实现、测试划分、可公开的基线对比。旧版材料的“约 1 万组教师 pair、约 1000 组人工偏好对”先核清单位；没有核准的提升比例与超参不硬背。</p>
+</details></article>
+
+<article class="study-card" id="q8" data-tags="p0 project">
+<div class="card-top"><span class="badge">P0 · VGIF 与 CineTechBench</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q8 你的论文怎样让评测更可解释、更可诊断</h3>
+<details class="answer" open><summary>项目回答骨架</summary>
+<p><strong>VGIF-Score：</strong>复杂指令总分难定位问题，因此把时空指令拆成带依赖关系的 ST-DAG，再构造 QA 和 AutoRubric，用 VLM 检查原子条件。简历覆盖 14 个模型、3000+ 生成视频；讲一个多实体交互、状态变化或因果链失败的真实案例，比堆指标更有说服力。</p>
+<p><strong>用于解释的例子：</strong>“拿起杯子 → 倒水 → 放回桌面”需要分别验证实体、动作和顺序，不能仅凭一帧“人和杯子都出现”判成功。追问时说清父节点失败后子节点的计分、证据不足处理、问题生成与裁判误差，严格按论文/代码实际规则回答。</p>
+<p><strong>CineTechBench：</strong>把影视专业能力拆成 7 个核心维度，分别考察理解与生成；可讲模型在动态/空间感知上的短板。它体现“专家概念 → 可判定任务 → 失效模式”的方法。署名按最新简历：NeurIPS 2025 <strong>共同第一作者</strong>；VGIF-Score 为 PRCV 2026 第一作者。</p>
+<p class="followup"><b>最可能追问：</b>“VLM 自己也会错怎么办？”答人工小集核验、分层误差分析、关键片段证据、独立交叉检查；把框架误差与被测模型误差区分开。</p>
+</details></article>
+
+<article class="study-card" id="q9" data-tags="p0 project quick">
+<div class="card-top"><span class="badge">P0 · 在线评测平台</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q9 怎样把评测做成能日常使用的系统</h3>
+<details class="answer" open><summary>项目回答骨架</summary>
+<p>先用简历里实际建设的链路回答，再展开你亲自实现的模块：</p>
+<div class="step-line" aria-label="评测平台流程"><span>发起任务与选集</span><i>→</i><span>批量生成</span><i>→</i><span>人评 / 机评</span><i>→</i><span>聚合与对比</span><i>→</i><span>报告与回归</span></div>
+<ul><li><strong>任务可追溯：</strong>记录 task ID、样本/媒体 hash、模型版本、生成配置、评分器/量表版本、原始输出、逐维分数与证据。</li><li><strong>执行可恢复：</strong>异步队列、并发限流、超时重试、幂等去重、缓存和断点续跑；明确哪些是已做、哪些是扩展设计。</li><li><strong>比较可解释：</strong>看板从全局指标下钻场景、考点与 A/B 原视频；人工复核可追踪，标准变更后保留旧版或统一重评。</li><li><strong>失败可见：</strong>分别统计生成失败、评分失败与安全拒绝；有效样本上的质量分与全量成功率一起报告，不能悄悄丢掉失败样本。</li></ul>
+<p class="followup"><b>追问“千万级、80%是什么意思”：</b>千万级是打标管线产量；“置信度约 80%”需解释定义、抽检方式和样本口径，不能直接说成准确率或人评一致率。若无法解释，先讲有证据的质量控制方法。</p>
+</details></article>
+
+<article class="study-card" id="q10" data-tags="p0 project">
+<div class="card-top"><span class="badge">P0 · 归因与上线</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q10 评测报告怎样转成可执行的优化建议</h3>
+<details class="answer" open><summary>参考回答与示例</summary>
+<p><strong>每条结论带上场景、错误类型、证据、可能原因、验证实验和验收条件。</strong>先排查评测协议、抽帧和裁判是否变了，再区分数据覆盖、模型能力与生成策略问题；相关性只能形成归因假设，要用控制变量验证。</p>
+<p><strong>示例，非项目结果：</strong>新版本整体更清晰，但双人快速交互更差 → 下钻后发现遮挡后身份错乱 → 检查相应训练覆盖与局部轨迹证据 → 定向补充交互难例、比较训练或采样改动 → 在冻结留出集上验证交互提升，同时监控单人、美学与运动回归。</p>
+<p>上线建议写成<strong>通过 / 有条件通过 / 暂缓</strong>，依据预先约定的安全硬约束、核心场景非劣要求、收益置信区间、时延与成本。困难集改善后仍需回到固定业务集复测；不能一边看测试集一边持续调阈值。</p>
+<p class="followup"><b>用快手项目接：</b>Video Agent 以端到端任务成功率为主，再沿感知、定位、检索、工具调用、跨步骤推理定位首个关键失败点，明确下一轮该补哪个模块。</p>
+</details></article>
+</section>
+
+<section class="section" id="delivery" aria-labelledby="delivery-title">
+<div class="section-head"><h2 id="delivery-title"><small>07</small>工程与加分项补盲</h2><span>会讲基本原理，经历按实际范围回答</span></div>
+<article class="study-card" id="q11" data-tags="p0">
+<div class="card-top"><span class="badge">P0 · 安全与幻觉</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q11 安全评测和合规材料怎么准备</h3>
+<details class="answer" open><summary>参考回答与追问</summary>
+<p>按<strong>内容风险 × 输入形式 × 攻击方式 × 使用场景</strong>构建测试集，覆盖有害内容、隐私、歧视、越狱、提示注入及图文组合攻击。报告攻击成功率/不安全输出率、有害漏放率、正常请求误拒率，以及严重度和样本分母；需要人工复核的保留证据。</p>
+<p><strong>幻觉：</strong>VLM 描述要把实体、属性、关系等声明逐条对齐视觉证据；可结合 DetailVerifyBench 的密集错误定位思路。RAG 则检查回答是否受检索证据支持。创意视频中的虚构元素，需根据用户任务判断，不能直接当事实性幻觉。</p>
+<p><strong>合规回答到你能落地的部分：</strong>准备数据来源与授权、标注规则与质检记录、安全测试方案、结果/整改留痕、版本与生成标识检查材料。安全评估与算法备案是否适用，要按服务属性和现行要求确认；同时了解显式和文件元数据隐式标识。<a class="source-ref" href="#ref-compliance">[7]</a></p>
+<p class="followup"><b>经历边界：</b>“我有评测数据和证据链建设经验；备案申报流程目前了解基本要求，尚未独立负责。”若确实未做过，照此说明即可。</p>
+</details></article>
+
+<article class="study-card" id="q12" data-tags="supplement project">
+<div class="card-top"><span class="badge optional">P1 · RAG 与 Agent</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q12 RAG 和 Agent 的评估重点有什么不同</h3>
+<details class="answer" open><summary>加分项速记</summary>
+<p><strong>RAG：</strong>分开评检索与回答。检索看证据召回、相关性和排序质量；回答看正确性、问题相关性与 Faithfulness，即回答声明能否由检索上下文支持。忠于错误上下文也可能答错，所以忠实性不等于事实正确性。Ragas 提供评测指标；LangSmith 可用于追踪与数据集实验管理，具体能力按使用版本确认。<a class="source-ref" href="#ref-ragas">[8]</a></p>
+<p><strong>Agent：</strong>核心是任务成功率与环境最终状态，同时看工具及参数是否正确、轨迹关键节点、无效步骤、时延、成本和安全。达到相同正确结果的不同有效轨迹不应被逐步完全匹配规则误罚。</p>
+<p class="followup"><b>接你的经历：</b>快手的三类任务是长剧情理解、暂停帧实体识别与搜索、长教学视频步骤提取。优先讲其中一个真实失败链；用 RAG 构造评测数据，不等于已经落地 Ragas 评测。</p>
+</details></article>
+
+<article class="study-card" id="q13" data-tags="supplement">
+<div class="card-top"><span class="badge optional">P1 · 训练与工程速记</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>Q13 PyTorch、LoRA、vLLM 与服务化最少要会什么</h3>
+<details class="answer" open><summary>加分项速记</summary>
+<ul><li><strong>训练：</strong>Dataset/DataLoader → 多模态预处理 → forward/loss → backward → optimizer/scheduler → 验证与 checkpoint。推理切 <code>eval()</code> 并用 <code>inference_mode()</code>；损失下降后仍要验人类偏好与留出场景。</li><li><strong>SFT 与 LoRA：</strong>SFT 是监督微调范式，LoRA 是只训练低秩权重增量的参数高效方法，两者可结合；QLoRA 再引入量化。核查实际可训练参数、label mask、视觉输入截断和回归头保存。<a class="source-ref" href="#ref-lora">[9]</a></li><li><strong>vLLM：</strong>面向受支持 LLM/VLM 的高效推理服务；PagedAttention 改善 KV cache 管理，continuous batching 提高并发利用率。评估吞吐、TTFT、P95 时延、显存与失败率；不是 Wan 扩散视频生成的通用加速器。<a class="source-ref" href="#ref-vllm">[10]</a></li><li><strong>服务化设计：</strong>FastAPI/Flask 接收任务并返回 job ID，后台 worker 执行重任务；Docker 固定依赖与运行环境，模型、配置、数据和驱动兼容性仍需记录。长视频任务避免一直阻塞 HTTP 请求。</li></ul>
+<p class="followup"><b>回答“你会不会”：</b>先讲实际做过的训练/平台模块，再解释上面的基本方案。简历没有写明使用过的 Docker、FastAPI、vLLM，不要临时改写成生产落地经验。</p>
+</details></article>
+</section>
+
+<section class="section" id="morning" aria-labelledby="morning-title">
+<div class="section-head"><h2 id="morning-title"><small>08</small>明早最后一遍</h2><span>不再扩新知识，检查表达与口径</span></div>
+<article class="study-card" id="last-check" data-tags="p0 quick">
+<div class="card-top"><span class="badge">P0 · 最后 10 分钟</span><button class="mark" aria-pressed="false">标记掌握</button></div>
+<h3>六句要能脱稿说，四个口径今晚核清</h3>
+<details class="answer" open><summary>面试前检查清单</summary>
+<ol><li>评测先定业务维度、量表与门槛，再做人评、机评和样本覆盖。</li><li>PLCC 看线性，SRCC 看排序，KROCC 看样本对；相关不等于校准或准确率。</li><li>Judge 用独立人工集验收，重点查偏置、分布外、平局和评分注入。</li><li>模型比较冻结协议，保留 A/B 配对；置信区间按独立的 prompt/源内容簇计算。</li><li>RM 是训练代理，收益还要用独立人评与评测器确认，并监测静止、遮挡等投机。</li><li>结论必须落到失败场景、证据、可执行改动与回归验收。</li></ol>
+<p class="mini-label">今晚用 5 分钟核对</p>
+<ul class="checklist"><li><strong>职责：</strong>你亲自完成的两个模块、最难问题与验证结果。</li><li><strong>数字：</strong>pair / 视频 / prompt / QA 数量分清；不混报样本级相关与模型级排名相关。</li><li><strong>论文：</strong>CineTechBench 共同第一作者；VGIF 第一作者；DetailVerifyBench 在现有简历中为在投，最新状态按真实情况讲。</li><li><strong>效果：</strong>准备一个可公开的对比，说明测试集、基线、指标和局限；无法核准的精确提升不报。</li></ul>
+<p><strong>被问到暂时不会的点：</strong>“这部分我还没有独立落地。我会先明确……，用……做基线，再通过……验证。”接上可执行方法，避免编造经验。</p>
+<p><strong>反问选两个：</strong>目前最影响上线决策的是裁判可靠性、数据覆盖还是工具效率？这个岗位前三个月最希望交付什么？评测发现的问题由哪个团队承接，如何复测验收？</p>
+</details></article>
+</section>
+
+<aside class="references" aria-label="资料来源与事实说明">
+<details id="sources"><summary>来源与核对说明 · 面试前无需逐条阅读</summary>
+<p>个人经历主要依据本地 2026 年 9 月更新的《许颂毓-北邮2027届-大模型算法》简历，结合技术优化版简历与既有项目资料。正文中的通用设计建议与示例不代表已完成的个人成果。没有采用材料间不一致的精确评测项数、未核实提升比例或内部地址。</p>
+<ol>
+<li id="ref-vbench"><a href="https://github.com/Vchitect/VBench" target="_blank" rel="noopener noreferrer">VBench 官方仓库</a>：视频生成的分维评测思路；正文门控方案结合个人业务经历整理。</li>
+<li id="ref-stats"><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html" target="_blank" rel="noopener noreferrer">SciPy Pearson</a>、<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html" target="_blank" rel="noopener noreferrer">Spearman</a>、<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kendalltau.html" target="_blank" rel="noopener noreferrer">Kendall</a>：指标定义与并列秩。</li>
+<li id="ref-itu"><a href="https://www.itu.int/rec/R-REC-BT.500" target="_blank" rel="noopener noreferrer">ITU-R BT.500</a>：主观图像质量实验方法。</li>
+<li id="ref-judge"><a href="https://arxiv.org/abs/2306.05685" target="_blank" rel="noopener noreferrer">Judging LLM-as-a-Judge</a>：裁判与人类偏好的一致性及偏置。</li>
+<li id="ref-clip"><a href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener noreferrer">CLIP 原论文</a>：图文对比学习与双编码器。</li>
+<li id="ref-blip"><a href="https://arxiv.org/abs/2201.12086" target="_blank" rel="noopener noreferrer">BLIP</a>、<a href="https://arxiv.org/abs/2301.12597" target="_blank" rel="noopener noreferrer">BLIP-2</a>：图文理解生成及视觉与语言模型的连接。</li>
+<li id="ref-compliance"><a href="https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm" target="_blank" rel="noopener noreferrer">生成式人工智能服务管理暂行办法</a>、<a href="https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm" target="_blank" rel="noopener noreferrer">人工智能生成合成内容标识办法</a>：服务适用范围、相关安全义务与内容标识。具体项目以现行要求为准。</li>
+<li id="ref-ragas"><a href="https://docs.ragas.io/en/stable/concepts/metrics/overview/" target="_blank" rel="noopener noreferrer">Ragas 指标文档</a>、<a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/" target="_blank" rel="noopener noreferrer">Faithfulness</a>、<a href="https://docs.langchain.com/langsmith/evaluation" target="_blank" rel="noopener noreferrer">LangSmith Evaluation</a>：RAG 指标、忠实性与数据集实验。</li>
+<li id="ref-lora"><a href="https://huggingface.co/docs/peft/main/package_reference/lora" target="_blank" rel="noopener noreferrer">PEFT LoRA</a>、<a href="https://huggingface.co/docs/trl/sft_trainer" target="_blank" rel="noopener noreferrer">TRL SFT Trainer</a>：训练范式与适配器。</li>
+<li id="ref-vllm"><a href="https://docs.vllm.ai/en/stable/" target="_blank" rel="noopener noreferrer">vLLM 文档</a>、<a href="https://arxiv.org/abs/2309.06180" target="_blank" rel="noopener noreferrer">PagedAttention 论文</a>：推理服务与 KV cache 管理。</li>
+</ol>
+</details>
+</aside>
+<footer class="bottom"><span>更新 2026.10.19 · 计算例与架构动画均可离线使用。</span><button class="tool-btn" id="reset">清除掌握标记</button><a href="#main">返回顶部 ↑</a></footer>
+</main>
+</div>
+<script id="metric-core">
+(function (root) {
+  'use strict';
+  const sum = a => a.reduce((s, x) => s + x, 0);
+  const mean = a => sum(a) / a.length;
+  function ranks(a) {
+    const out = Array(a.length), order = a.map((v, i) => ({v, i})).sort((a, b) => a.v - b.v);
+    for (let start = 0; start < order.length;) {
+      let end = start + 1;
+      while (end < order.length && order[end].v === order[start].v) end++;
+      const rank = (start + 1 + end) / 2;
+      for (let j = start; j < end; j++) out[order[j].i] = rank;
+      start = end;
+    }
+    return out;
+  }
+  function pearson(a, b) {
+    if (a.length !== b.length || a.length < 2) return NaN;
+    const am = mean(a), bm = mean(b);
+    const cross = sum(a.map((v, i) => (v - am) * (b[i] - bm)));
+    const denominator = Math.sqrt(sum(a.map(v => (v - am) ** 2)) * sum(b.map(v => (v - bm) ** 2)));
+    return denominator === 0 ? NaN : cross / denominator;
+  }
+  function kendall(a, b) {
+    let c = 0, d = 0, tx = 0, ty = 0, both = 0;
+    const pairs = [];
+    for (let i = 0; i < a.length; i++) for (let j = i + 1; j < a.length; j++) {
+      const sa = Math.sign(a[i] - a[j]), sb = Math.sign(b[i] - b[j]);
+      let kind;
+      if (sa * sb > 0) { c++; kind = '一致'; }
+      else if (sa * sb < 0) { d++; kind = '逆序'; }
+      else if (sa === 0 && sb === 0) { both++; kind = '两边平局'; }
+      else if (sa === 0) { tx++; kind = '仅模型平局'; }
+      else { ty++; kind = '仅人评平局'; }
+      pairs.push({i, j, kind});
+    }
+    const denominator = Math.sqrt((c + d + tx) * (c + d + ty));
+    return {value: denominator ? (c - d) / denominator : NaN, c, d, tx, ty, both, pairs};
+  }
+  function metrics(predicted, human) {
+    if (predicted.length !== human.length || !human.length) throw Error('Paired data must have the same nonzero length.');
+    const rp = ranks(predicted), rh = ranks(human);
+    return {
+      plcc: pearson(predicted, human), srcc: pearson(rp, rh), kendall: kendall(predicted, human),
+      mae: mean(predicted.map((v, i) => Math.abs(v - human[i]))),
+      rmse: Math.sqrt(mean(predicted.map((v, i) => (v - human[i]) ** 2))),
+      rp, rh, predictedMean: mean(predicted), humanMean: mean(human)
+    };
+  }
+  const classify = (gap, epsilon) => {
+    const tolerance = 8 * Number.EPSILON * Math.max(1, Math.abs(gap), Math.abs(epsilon));
+    return Math.abs(gap) <= epsilon + tolerance ? 'T' : gap > 0 ? 'W' : 'L';
+  };
+  function preference(cases, epsilon) {
+    const rows = cases.map(row => ({...row, predicted: classify(row.a - row.b, epsilon)}));
+    const eligible = rows.filter(row => row.gt !== 'T');
+    const wins = rows.filter(row => row.gt === 'W').length;
+    const ties = rows.filter(row => row.gt === 'T').length;
+    const losses = rows.length - wins - ties;
+    return {
+      rows, wins, ties, losses,
+      allAccuracy: mean(rows.map(row => Number(row.gt === row.predicted))),
+      nonTieAccuracy: eligible.length ? mean(eligible.map(row => Number(row.gt === row.predicted))) : NaN,
+      allCorrect: rows.filter(row => row.gt === row.predicted).length,
+      nonTieCorrect: eligible.filter(row => row.gt === row.predicted).length,
+      nonTieCount: eligible.length,
+      strictWinRate: wins / rows.length,
+      halfTieWinRate: (wins + 0.5 * ties) / rows.length,
+      nonTieWinRate: wins + losses ? wins / (wins + losses) : NaN
+    };
+  }
+  function bt(delta) {
+    const probability = delta >= 0 ? 1 / (1 + Math.exp(-delta)) : Math.exp(delta) / (1 + Math.exp(delta));
+    return {probability, loss: Math.max(-delta, 0) + Math.log1p(Math.exp(-Math.abs(delta)))};
+  }
+  function meanCI(scores, critical) {
+    const m = mean(scores), sd = Math.sqrt(sum(scores.map(x => (x - m) ** 2)) / (scores.length - 1));
+    const se = sd / Math.sqrt(scores.length);
+    return {mean: m, sd, se, lower: m - critical * se, upper: m + critical * se};
+  }
+  function exactBootstrap(values, drawCount) {
+    if (!values.length || values.some(v => !Number.isInteger(v)) || !Number.isInteger(drawCount) || drawCount < 1 || drawCount > 100) throw Error('This teaching calculator expects integer values and 1–100 draws.');
+    const low = Math.min(...values), high = Math.max(...values), base = Array(high - low + 1).fill(0);
+    values.forEach(v => { base[v - low] += 1 / values.length; });
+    let probabilities = [1];
+    for (let step = 0; step < drawCount; step++) {
+      const next = Array(probabilities.length + base.length - 1).fill(0);
+      probabilities.forEach((p, i) => base.forEach((q, j) => { next[i + j] += p * q; }));
+      probabilities = next;
+    }
+    function quantile(q) {
+      let cdf = 0;
+      for (let i = 0; i < probabilities.length; i++) {
+        cdf += probabilities[i];
+        if (cdf >= q) return (i + low * drawCount) / drawCount;
+      }
+      return high;
+    }
+    return {lower: quantile(.025), upper: quantile(.975), mean: mean(values), se: Math.sqrt(mean(values.map(v => (v - mean(values)) ** 2)) / drawCount)};
+  }
+  function ngrams(tokens, n) {
+    const out = new Map();
+    for (let i = 0; i <= tokens.length - n; i++) {
+      const key = tokens.slice(i, i + n).join(' ');
+      out.set(key, (out.get(key) || 0) + 1);
+    }
+    return out;
+  }
+  function overlap(candidate, reference, n) {
+    const ca = ngrams(candidate, n), re = ngrams(reference, n);
+    return sum([...ca].map(([key, count]) => Math.min(count, re.get(key) || 0)));
+  }
+  function lcs(a, b) {
+    const rows = Array.from({length: a.length + 1}, () => Array(b.length + 1).fill(0));
+    for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++) rows[i][j] = a[i - 1] === b[j - 1] ? rows[i - 1][j - 1] + 1 : Math.max(rows[i - 1][j], rows[i][j - 1]);
+    return rows[a.length][b.length];
+  }
+  function textMetrics(reference, candidate) {
+    const r = reference.toLowerCase().trim().split(/\s+/).filter(Boolean), c = candidate.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    const one = overlap(c, r, 1), two = overlap(c, r, 2);
+    const p1 = c.length ? one / c.length : 0, p2 = c.length > 1 ? two / (c.length - 1) : 0;
+    const bp = !c.length ? 0 : c.length > r.length ? 1 : Math.exp(1 - r.length / c.length);
+    const precision = p1, recall = r.length ? one / r.length : 0;
+    const length = lcs(c, r), lp = c.length ? length / c.length : 0, lr = r.length ? length / r.length : 0;
+    const f1 = (p, r) => p + r ? 2 * p * r / (p + r) : 0;
+    return {reference: r, candidate: c, one, two, p1, p2, bp, bleu2: bp * Math.sqrt(p1 * p2), precision, recall, rouge1: f1(precision, recall), lcs: length, rougeL: f1(lp, lr)};
+  }
+  const clipScore = cosine => 2.5 * Math.max(cosine, 0);
+  const frechet1D = (muReal, sigmaReal, muGenerated, sigmaGenerated) => (muReal - muGenerated) ** 2 + (sigmaReal - sigmaGenerated) ** 2;
+  root.InterviewMath = {sum, mean, ranks, pearson, kendall, metrics, classify, preference, bt, meanCI, exactBootstrap, textMetrics, clipScore, frechet1D};
+})(globalThis);
+
+</script>
+<script id="model-data">
+globalThis.InterviewModelData={
+  "models": [
+    {
+      "id": "dual",
+      "title": "偏好微调双塔",
+      "subtitle": "PickScore：CLIP-H/14；HPS v2 / v2.1：OpenCLIP ViT-H/14",
+      "kind": "dual",
+      "inputLabel": [
+        "图像候选 A / B",
+        "同一个真实 prompt"
+      ],
+      "visionLabel": [
+        "ViT-H/14 图像塔",
+        "独立编码与池化"
+      ],
+      "connectorLabel": [
+        "L2 归一化",
+        "图文向量点积"
+      ],
+      "llmLabel": [
+        "文本 Transformer",
+        "独立编码与池化"
+      ],
+      "outputLabel": [
+        "余弦 × 温度尺度",
+        "同 prompt 内排序",
+        "softmax 相对偏好"
+      ],
+      "promptLabel": [
+        "生成 prompt",
+        "不是质量评分指令"
+      ],
+      "steps": [
+        {
+          "title": "图文输入两路",
+          "text": "输入生成提示词与候选图像：同一提示词可以对应多张候选。两路分别预处理，保持相同图像尺寸、文本截断规则和模型版本，才便于稳定比较。"
+        },
+        {
+          "title": "独立双塔编码",
+          "text": "图像由 ViT-H/14 编码，提示词由文本 Transformer 编码。两路各自提取特征，评分时文本 token 不会在编码内部读取具体图像 patch。"
+        },
+        {
+          "title": "池化并归一化",
+          "text": "将视觉与文本序列各池化成一个全局向量，再分别做 L2 归一化。此时保留的是整体表示，归一化后点积只反映方向相近程度，不受向量长度直接影响。"
+        },
+        {
+          "title": "余弦点积匹配",
+          "text": "将两个归一化向量做点积，得到图文余弦相似度；训练后还会使用温度尺度。整体相近不代表每个对象、数量和位置都满足提示词，细节仍需专项验证。"
+        },
+        {
+          "title": "输出偏好分数",
+          "text": "按分数比较同提示词候选，或经 softmax 得相对偏好。HPSv2 论文报告余弦乘百，官方 API 未乘百；PickScore 使用学习尺度，两者数值不能直接混比。"
+        }
+      ],
+      "training": "两者都微调双塔，让人偏好的图相对得分更高。PickScore 使用 Pick-a-Pic，HPSv2 使用 HPD v2；不是训练一个通用百分制质量回归器。",
+      "limit": "整体向量可能漏掉数量、位置和局部缺陷；偏好概率依赖候选集合。v2、v2.1 及原始分/百分缩放不能混报。",
+      "speech": "我会先用偏好双塔做低成本筛选。PickScore 和 HPSv2 都是图文独立编码后点积，差别主要在偏好数据和训练。它们能学人更喜欢哪张，但不能代替技术质量、安全或物理正确性检查，业务场景还要验证人工一致性。",
+      "sources": [
+        {
+          "title": "PickScore论文：KL与平局标签",
+          "url": "https://arxiv.org/html/2305.01569v1"
+        },
+        {
+          "title": "HPSv2论文第4节",
+          "url": "https://arxiv.org/html/2306.09341v2"
+        },
+        {
+          "title": "官方单图API",
+          "url": "https://github.com/tgxs002/HPSv2/blob/master/hpsv2/img_score.py"
+        }
+      ]
+    },
+    {
+      "id": "imagereward",
+      "title": "交叉注意力奖励",
+      "subtitle": "ImageReward / NeurIPS 2023：BLIP ViT-L + 文本编码器 + MLP",
+      "kind": "image",
+      "inputLabel": [
+        "一张生成图像",
+        "对应生成 prompt"
+      ],
+      "visionLabel": [
+        "BLIP ViT-L",
+        "保留图像 patch tokens"
+      ],
+      "connectorLabel": [
+        "Cross-attention",
+        "图像提供 K / V"
+      ],
+      "llmLabel": [
+        "BLIP 文本编码器",
+        "文本提供查询 Q"
+      ],
+      "outputLabel": [
+        "融合 [CLS] 特征",
+        "MLP → 标量奖励",
+        "固定标准化，可为负"
+      ],
+      "promptLabel": [
+        "真实生成 prompt",
+        "文本 token 查询图像"
+      ],
+      "steps": [
+        {
+          "title": "输入图像提示",
+          "text": "输入一张生成图与对应真实提示词，按官方规则调整图像并处理文本。提示词提供要检查的对象与属性；长文本会截断，因此输入配置也属于评测条件。"
+        },
+        {
+          "title": "双路特征编码",
+          "text": "图像经 BLIP 的 ViT-L 得到一串 patch 特征，文字进入文本编码器并形成查询 Q。保留局部视觉信息，为下一步文本读取图像不同区域提供基础。"
+        },
+        {
+          "title": "交叉注意读取",
+          "text": "文本特征提供 Q，图像 patch 特征提供 K 和 V，交叉注意力把相关视觉内容读入文本表示。示意连线只解释交互原理，不能当作真实模型注意力的可视化证据。"
+        },
+        {
+          "title": "提取融合特征",
+          "text": "经过跨模态交互后，提取文本序列 CLS 位置的隐藏状态。这个向量已经结合图像内容和文字要求，与双塔仅在末端比较两个独立向量的方式不同。"
+        },
+        {
+          "title": "奖励头与标定",
+          "text": "融合 CLS 特征经 MLP 输出单个奖励，再使用固定均值与标准差归一化。最终分数可以为负，适合比较候选偏好，但它不是零到一的合格概率或百分制质量分。"
+        }
+      ],
+      "training": "BLIP 融合特征接 MLP，以人工优劣图对训练：L=−log sigmoid(r优−r劣)。输出是标准化奖励，不是 MOS 的百分制。",
+      "limit": "综合奖励难直接归因，不能替代安全检测。官方长提示词会截断；图文细粒度交互也不保证所有属性、关系都判断正确。",
+      "speech": "ImageReward 与双塔的区别是内部交互：BLIP 文本 token 通过 cross-attention 读取图像 patch，再由融合特征预测奖励。训练用人工优劣图对，适合候选筛选；但单个综合分难解释缺陷，需要配合维度标注和人工抽检。",
+      "sources": [
+        {
+          "title": "ImageReward论文：架构与pairwise loss",
+          "url": "https://arxiv.org/html/2304.05977v4"
+        },
+        {
+          "title": "官方实现：cross-attention、CLS与标准化",
+          "url": "https://github.com/zai-org/ImageReward/blob/main/ImageReward/ImageReward.py"
+        }
+      ]
+    },
+    {
+      "id": "qalign",
+      "title": "等级概率变连续分",
+      "subtitle": "Q-Align / ICML 2024：mPLUG-Owl2（CLIP ViT-Large + LLaMA2-7B 系列）",
+      "kind": "joint",
+      "inputLabel": [
+        "图像 / 抽样视频帧",
+        "质量或美学任务问题"
+      ],
+      "visionLabel": [
+        "CLIP ViT-Large",
+        "视觉 patch 特征"
+      ],
+      "connectorLabel": [
+        "Visual abstractor",
+        "压缩为视觉 tokens"
+      ],
+      "llmLabel": [
+        "mPLUG-Owl2",
+        "多模态语言解码器"
+      ],
+      "outputLabel": [
+        "五等级 token logits",
+        "五者 softmax",
+        "期望分：1 到 5"
+      ],
+      "promptLabel": [
+        "任务问题与回答前缀",
+        "quality / aesthetics"
+      ],
+      "steps": [
+        {
+          "title": "视觉任务输入",
+          "text": "输入图像或抽样视频帧，并给出质量或美学任务问题和回答前缀。任务指令定义要评什么；感知质量任务不自动等同于检查生成提示词的细粒度一致性。"
+        },
+        {
+          "title": "视觉特征编码",
+          "text": "CLIP ViT-Large 将视觉输入切成 patch 并编码，得到局部视觉特征。视频使用抽样帧承载信息，因此短暂缺陷是否可见，仍受帧数与采样策略影响。"
+        },
+        {
+          "title": "压缩接入语言",
+          "text": "visual abstractor 通过可学习查询压缩视觉 tokens，文字则映射为文本 embeddings。两类表示整理进语言模型上下文，减少后续视觉计算量并连接任务语义。"
+        },
+        {
+          "title": "语言预测等级",
+          "text": "mPLUG-Owl2 联合处理视觉信息与任务文字，在回答等级词的位置产生 logits。关注 bad 到 excellent 五个词的预测，不必先自由生成整段解释再抽取数字。"
+        },
+        {
+          "title": "概率期望评分",
+          "text": "只取五等级 logits 重新 softmax，按 bad 到 excellent 的一到五分求概率期望。原版可得到三点七等连续分；它保留等级不确定性，但不是校准过的人工分布。"
+        }
+      ],
+      "training": "将 MOS 区间映射为五个自然语言等级，进行语言 SFT。推理对五等级 logits 重新归一化，按 [5,4,3,2,1] 求期望。",
+      "limit": "原版输出是 1–5，Q-ReAlign 的归一化权重另算。等级概率不等于校准过的评分员分布，质量分也不自动覆盖提示词一致性。",
+      "speech": "Q-Align 用等级词连接人类评分和语言模型。先学 bad 到 excellent，再取五等级概率的期望得到连续分，避免直接让模型报任意小数。它统一质量、美学和视频任务，但任务定义、分值尺度与人工校准仍需要分别说明。",
+      "sources": [
+        {
+          "title": "Q-Align论文",
+          "url": "https://arxiv.org/abs/2312.17090"
+        },
+        {
+          "title": "官方README：五等级[5,4,3,2,1]",
+          "url": "https://github.com/Q-Future/Q-Align"
+        },
+        {
+          "title": "mPLUG-Owl2架构论文",
+          "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Ye_mPLUG-Owl2_Revolutionizing_Multi-modal_Large_Language_Model_with_Modality_Collaboration_CVPR_2024_paper.pdf"
+        }
+      ]
+    },
+    {
+      "id": "hpsv3",
+      "title": "带不确定性的偏好奖励",
+      "subtitle": "HPSv3 / ICCV 2025：Qwen2-VL-7B-Instruct + MLP",
+      "kind": "joint",
+      "inputLabel": [
+        "一张生成图像",
+        "对应真实 prompt"
+      ],
+      "visionLabel": [
+        "Qwen2-VL 视觉塔",
+        "图像视觉 tokens"
+      ],
+      "connectorLabel": [
+        "MLP merger",
+        "视觉特征投影"
+      ],
+      "llmLabel": [
+        "Qwen2-VL-7B",
+        "图文联合表征"
+      ],
+      "outputLabel": [
+        "MLP → μ 和 σ",
+        "不确定性排序训练",
+        "推理取 μ 为奖励"
+      ],
+      "promptLabel": [
+        "生成 prompt",
+        "与图像联合编码"
+      ],
+      "steps": [
+        {
+          "title": "图文任务输入",
+          "text": "输入生成图像与真实生成提示词，并按评分模板组织任务。只有实际提供文字要求，模型才能判断图像是否遵循；看图猜测可能的提示词不能替代条件对齐评估。"
+        },
+        {
+          "title": "视觉特征编码",
+          "text": "Qwen2-VL 视觉编码器将图像变成 patch 特征，保留供联合理解使用的视觉信息。此处沿用该版本基座，不能套入后续 HPSv3++ 的新基座与条件模块。"
+        },
+        {
+          "title": "连接文字嵌入",
+          "text": "MLP merger 将视觉特征压缩并投影到语言维度，提示词进入文本 embedding。视觉与文字 token 进入同一上下文，不再只是两个全局向量的末端点积。"
+        },
+        {
+          "title": "联合图文理解",
+          "text": "Qwen2-VL-7B 在多模态上下文中处理视觉信息与提示词，形成用于偏好判断的联合表征。这与 ImageReward 的 BLIP 交叉注意模块不是同一张架构图。"
+        },
+        {
+          "title": "均值奖励输出",
+          "text": "联合特征经 MLP 得到奖励均值 μ 与分散程度 σ，发布推理示例选择 μ 作为最终分。σ 是模型不确定性信号，未经业务校准不能直接称为统计置信区间。"
+        }
+      ],
+      "training": "以 HPDv3 成对偏好学习均值与不确定性，优化 uncertainty-aware ranking。核心是偏好监督与奖励分布建模，不是自由生成解释。",
+      "limit": "7B 基座成本高于双塔；σ 未必严格校准。模型仍有场景和人群偏差，必须以独立人工样本验证，不把它当全维度质量判官。",
+      "speech": "HPSv3 从双塔升级为 Qwen2-VL 联合表征，奖励头不只输出均值，还估计不确定性，并用成对偏好训练。推理取均值排序，含糊样本可优先送人工；但不确定性需要校准，大模型也不能免除业务切片验证。",
+      "sources": [
+        {
+          "title": "HPSv3论文4.1节",
+          "url": "https://arxiv.org/html/2508.03789v1"
+        },
+        {
+          "title": "HPSv3官方代码及配置",
+          "url": "https://github.com/MizzenAI/HPSv3"
+        },
+        {
+          "title": "官方推理明确选择μ",
+          "url": "https://github.com/MizzenAI/HPSv3/blob/main/hpsv3/inference.py"
+        }
+      ]
+    },
+    {
+      "id": "videoreward",
+      "title": "三维直接视频奖励",
+      "subtitle": "VideoReward / 2025：Qwen2-VL-2B-Instruct；一个共享 Linear 头",
+      "kind": "videoReward",
+      "inputLabel": [
+        "视频：官方 2 FPS",
+        "对应生成 prompt"
+      ],
+      "visionLabel": [
+        "Qwen2-VL tubelet + ViT",
+        "有序时空视觉特征"
+      ],
+      "connectorLabel": [
+        "空间 2×2 merger",
+        "映射到语言空间"
+      ],
+      "llmLabel": [
+        "Qwen2-VL-2B",
+        "video｜VQ｜MQ｜prompt｜TA"
+      ],
+      "outputLabel": [
+        "三个 token 隐藏状态",
+        "同一个共享 Linear",
+        "VQ / MQ / TA"
+      ],
+      "promptLabel": [
+        "生成 prompt 在 VQ/MQ 后",
+        "文本对齐 TA 在 prompt 后"
+      ],
+      "steps": [
+        {
+          "title": "有序视频提示",
+          "text": "按官方二 FPS 设置抽取有序视频帧，同时保留真实生成提示词。固定抽帧率与分辨率便于比较；短暂闪烁或快速异常可能落在采样间隔内，需要额外检查。"
+        },
+        {
+          "title": "时空视觉编码",
+          "text": "Qwen2-VL 将相邻帧组织为 tubelet，再由视觉 ViT 编码，并通过空间 merger 接入语言维度。它保留有序时空信息，不是逐帧独立打分后简单求平均。"
+        },
+        {
+          "title": "排列奖励序列",
+          "text": "把 token 组织为 video、VQ、MQ、prompt、TA。位置安排决定后续可见上下文：前两个评分位置尚未读到提示词，文本对齐位置则位于提示词之后。"
+        },
+        {
+          "title": "读取三处隐藏",
+          "text": "因果 Transformer 让 VQ、MQ 根据视频形成隐藏状态，TA 同时结合视频与提示词。最后提取这三个位置的隐藏状态，分别承载视觉、运动和文本对齐判断。"
+        },
+        {
+          "title": "共享线性评分",
+          "text": "三个隐藏状态分别经过同一个共享 Linear，直接得到 VQ、MQ、TA 三个实数。它不是三个独立回归头，也无需逐词生成解释；聚合前仍须固定归一化配置。"
+        }
+      ],
+      "training": "约 182K 人类偏好样本，以包含平局的 BTT 损失训练。公开配置使用 LoRA；三个 reward token 的隐藏状态共用一个 Linear 评分头。",
+      "limit": "raw reward 没有固定 1–5 量表。低 FPS 会漏短时缺陷，且直接分数没有自然语言归因，需配合专项检测、人审或解释模型。",
+      "speech": "VideoReward 的关键是位置和因果掩码：VQ、MQ 在提示词前看视频，TA 在提示词后看视频和文字。三处隐藏状态共用一个线性头，直接输出三维奖励，再用含平局的人类偏好训练，适合批量筛选和生成模型对齐。",
+      "sources": [
+        {
+          "title": "VideoReward论文v1，§3.2与§5.1",
+          "url": "https://arxiv.org/html/2501.13918v1"
+        },
+        {
+          "title": "共享Linear头、special token取值与BTT loss实现",
+          "url": "https://github.com/KlingAIResearch/VideoAlign/blob/main/trainer.py"
+        },
+        {
+          "title": "官方checkpoint配置：base、output_dim=1、LoRA与归一化常数",
+          "url": "https://huggingface.co/KlingTeam/VideoReward/raw/main/model_config.json"
+        }
+      ]
+    },
+    {
+      "id": "unified",
+      "title": "用指令统一评分任务",
+      "subtitle": "UnifiedReward-2.0-qwen-7b / 2025：固定 Qwen2.5-VL-7B，非 Think 分支",
+      "kind": "joint",
+      "inputLabel": [
+        "视频展开为有序多图",
+        "caption + 任务 rubric"
+      ],
+      "visionLabel": [
+        "Qwen2.5-VL ViT",
+        "分别编码各张帧图"
+      ],
+      "connectorLabel": [
+        "4-patch + 两层 MLP",
+        "帧视觉 tokens 投影"
+      ],
+      "llmLabel": [
+        "Qwen2.5-VL-7B",
+        "point / pair 指令切换"
+      ],
+      "outputLabel": [
+        "LM head 生成分数",
+        "point：三维 1–5",
+        "pair：每维两项和为 1"
+      ],
+      "promptLabel": [
+        "真实 caption + rubric",
+        "明确 point 或 pair"
+      ],
+      "steps": [
+        {
+          "title": "多图任务输入",
+          "text": "固定二点零 Qwen2.5 版本：单视频评分 demo 均匀取十六帧，成对比较每段取八帧。帧作为有序多张 image 输入，并附真实 caption 与具体评分规则。"
+        },
+        {
+          "title": "逐图视觉编码",
+          "text": "Qwen2.5-VL 视觉编码器分别处理各张帧图，得到 patch 特征。这条多图路径不等同于原生 video 输入，不能因基座支持视频就宣称已利用绝对时间信息。"
+        },
+        {
+          "title": "投影嵌入拼接",
+          "text": "四 patch 聚合与两层 MLP merger 把视觉特征映射到语言维度，任务文字与 caption 转为文本 embeddings。按既定次序组织上下文，保留帧的顺序关系。"
+        },
+        {
+          "title": "任务指令理解",
+          "text": "Qwen2.5-VL-7B 联合读取帧图、caption 和 rubric，由指令决定单样本评分或成对比较。本图固定非 Think 分支，不能自动解释成先生成显式推理链。"
+        },
+        {
+          "title": "生成文本分数",
+          "text": "LM head 生成评分文本：point 视频三维各一到五，pair 每维两候选各零到一且和为一。解析后检查格式与范围，两种维度定义和绝对相对尺度不能直接混用。"
+        }
+      ],
+      "training": "官方提供 Qwen SFT 训练流程与 2.0 额外评分数据。完整数据混合配方未全部核实；不能把 UnifiedReward-Think 的 GRPO 管线归给所有 2.0。",
+      "limit": "有序多图稀疏采样可能漏动作细节；point 的 Physics 与 pair 的 Coherence 定义不同。生成式分数需要解析，相对分也不等于校准胜率。",
+      "speech": "UnifiedReward 的价值在统一任务接口。固定 Qwen2.5-VL 这个二点零版本后，输入帧图、caption 和 rubric，就能切换单样本评分或成对比较。我会明确抽帧和量表，区分绝对分与相对分，也区分二点零和 Think 两条版本线。",
+      "sources": [
+        {
+          "title": "明确checkpoint的官方模型卡",
+          "url": "https://huggingface.co/CodeGoat24/UnifiedReward-2.0-qwen-7b"
+        },
+        {
+          "title": "point视频评分：16帧、多图输入、APS 1–5",
+          "url": "https://github.com/CodeGoat24/UnifiedReward/blob/main/inference_qwen/UnifiedReward-2.0-inference/point_score_APS_video_generation.py"
+        },
+        {
+          "title": "pair视频评分：8+8帧、ACS相对分",
+          "url": "https://github.com/CodeGoat24/UnifiedReward/blob/main/inference_qwen/UnifiedReward-2.0-inference/pair_score_video_generation.py"
+        }
+      ]
+    },
+    {
+      "id": "videoscore2",
+      "title": "先分析再生成评分",
+      "subtitle": "VideoScore2 / 2025-09：Qwen2.5-VL-7B-Instruct，三维 1–5",
+      "kind": "joint",
+      "inputLabel": [
+        "原生 video：2 FPS",
+        "prompt + 三维评价规则"
+      ],
+      "visionLabel": [
+        "Qwen2.5-VL ViT",
+        "原生视频时序路径"
+      ],
+      "connectorLabel": [
+        "4-patch + 两层 MLP",
+        "视觉 token 接入语言空间"
+      ],
+      "llmLabel": [
+        "Qwen2.5-VL-7B",
+        "联合分析视频与 prompt"
+      ],
+      "outputLabel": [
+        "LM head 逐 token 生成",
+        "解释 + VQ / TA / PC",
+        "离散量表 1–5"
+      ],
+      "promptLabel": [
+        "生成 prompt + rubric",
+        "画质 / 对齐 / 物理常识"
+      ],
+      "steps": [
+        {
+          "title": "视频任务输入",
+          "text": "提供原生 video、真实生成提示词和三维评分规则，官方推理使用二 FPS。画质、文本对齐与物理常识一致性分别定义，避免总体印象掩盖某一维的明显失败。"
+        },
+        {
+          "title": "视频视觉编码",
+          "text": "Qwen2.5-VL 沿原生视频路径编码有序帧，提取视觉特征并利用基座时序位置能力。采样仍然稀疏，看到的证据是否覆盖快速动作，要结合具体视频判断。"
+        },
+        {
+          "title": "特征文字连接",
+          "text": "merger 聚合相邻 patch 并经两层 MLP 投影到语言空间，生成提示词和 rubric 形成文本 embeddings。视觉与文字汇入同一上下文，为后续三维判断提供条件。"
+        },
+        {
+          "title": "联合分析内容",
+          "text": "Qwen2.5-VL-7B 结合视频、提示词与量表分析画质、对齐及物理常识。语言分析可辅助复核，但表述流畅不等于每句话都有可靠视觉证据，需要抽查是否幻觉。"
+        },
+        {
+          "title": "生成解释评分",
+          "text": "LM head 自回归生成解释和三个一到五的离散分数，再解析为结构化结果。这一步有文本解码与格式失败成本，不能画成隐藏状态直接经过线性奖励头。"
+        }
+      ],
+      "training": "VideoFeedback2 约 27K 样本，先 SFT 冷启动再 GRPO；奖励约束三维分数接近人类真值。训练解释含辅助构建，非全部人工逐字编写。",
+      "limit": "解释会幻觉，采样和解析会造成波动。别与 2024 VideoScore/v1.1 混写；官方 soft score 也不是 Q-Align 那种五等级概率期望。",
+      "speech": "VideoScore2 把评分做成生成任务：Qwen2.5-VL 结合视频、prompt 和 rubric，输出画质、对齐、物理常识三维分及解释。先 SFT 再 GRPO 的价值是用人工分约束判断；代价是解释真实性、格式稳定性和解码成本都需要单独验证。",
+      "sources": [
+        {
+          "title": "VideoScore2论文，§3–4",
+          "url": "https://arxiv.org/html/2509.22799v1"
+        },
+        {
+          "title": "VideoScore2官方模型卡",
+          "url": "https://huggingface.co/TIGER-Lab/VideoScore2"
+        },
+        {
+          "title": "官方推理代码：2 FPS、1024 tokens、soft score公式",
+          "url": "https://github.com/TIGER-AI-Lab/VideoScore2/blob/main/vs2_inference.py"
+        }
+      ]
+    },
+    {
+      "id": "vqinsight",
+      "title": "用时序奖励训练裁判",
+      "subtitle": "VQ-Insight / AAAI 2026：Qwen2.5-VL-7B-Instruct，任务独立 checkpoint",
+      "kind": "joint",
+      "inputLabel": [
+        "原生视频 + 任务问题",
+        "对齐评估必须另供 prompt"
+      ],
+      "visionLabel": [
+        "Qwen2.5-VL 视频编码",
+        "有序视觉 tokens"
+      ],
+      "connectorLabel": [
+        "基座两层 MLP merger",
+        "视觉特征投影"
+      ],
+      "llmLabel": [
+        "Qwen2.5-VL-7B",
+        "顺序 / 打乱对照训练"
+      ],
+      "outputLabel": [
+        "LM head 生成答案",
+        "AIGC 三维 0–100",
+        "或自然质量 / A/B 偏好"
+      ],
+      "promptLabel": [
+        "任务规则 + 真实 caption",
+        "按任务选 checkpoint"
+      ],
+      "steps": [
+        {
+          "title": "视频规则输入",
+          "text": "选择任务 checkpoint，输入视频与任务问题；做文本对齐必须供给真实生成 prompt。AIGC demo 没有显式 caption，此处补齐评测所需条件并重新验证。"
+        },
+        {
+          "title": "有序视觉编码",
+          "text": "Qwen2.5-VL 视频视觉编码器提取有序帧的视觉特征，保持基座时序处理路径。不同任务沿用相同类型架构，但模型参数与输出定义需以具体 checkpoint 为准。"
+        },
+        {
+          "title": "投影连接文字",
+          "text": "沿用基座 MLP merger 将视觉特征投影到语言维度，任务规则与真实提示词形成文本 embeddings。创新重点在训练奖励设计，不是额外发明一个时序连接器。"
+        },
+        {
+          "title": "联合时序判断",
+          "text": "Qwen2.5-VL-7B 结合视频顺序与任务文字形成质量或偏好判断。时序训练旨在鼓励使用顺序信息，但推理此处仍是正常前向，不需要默认额外运行打乱输入对照。"
+        },
+        {
+          "title": "生成任务答案",
+          "text": "LM head 输出分析与答案：AIGC demo 三维为零到百分，自然视频和 A/B 比较另有任务格式。检查范围、字段与提示词条件，不能把所有分支无条件合并成同一量表。"
+        }
+      ],
+      "training": "渐进 GRPO：图像热身→视频任务与时序对照奖励→与生成器交替优化。训练的多 rollout 和打乱对照开销，不等于部署每次都要跑多遍。",
+      "limit": "原 AIGC demo 未显式传 caption；真正评对齐必须供真实 prompt 并重验证。不同任务需独立 checkpoint；时序奖励不构成物理理解证明。",
+      "speech": "VQ-Insight 适合回答如何让裁判使用时序：先从图像质量热身，再用有序和打乱视觉 token 的对照奖励做渐进 GRPO，最后和生成器交替迭代。我会保留外部人工验证集，也明确评文本对齐必须实际输入生成 prompt。",
+      "sources": [
+        {
+          "title": "VQ-Insight论文v1，渐进GRPO与奖励",
+          "url": "https://arxiv.org/html/2506.18564v1"
+        },
+        {
+          "title": "AAAI 2026官方实现与任务checkpoint说明",
+          "url": "https://github.com/xuanyuzhang21/VQ-Insight"
+        },
+        {
+          "title": "官方评分demo：0–100、JSON、不同子目录、生成上限",
+          "url": "https://github.com/xuanyuzhang21/VQ-Insight/blob/main/demo/demo_vqinsight_score.py"
+        }
+      ]
+    }
+  ],
+  "recent": [
+    {
+      "name": "HPSv3++ / 2026",
+      "text": "已公开 Qwen3-VL-8B-Instruct 版本与 hpsv3++.pth。新增能力编码、能力与 RL 迭代条件的 FiLM 调制，以及 OGD 持续学习；与图中的 Qwen2-VL HPSv3 区分。",
+      "url": "https://github.com/PlantPotatoOnMoon/HPSv3-PlusPlus"
+    },
+    {
+      "name": "Q-ReAlign / 2026",
+      "text": "Q-Align 官方指向的延续实现，换用 Qwen3.5 视觉语言基座，已公开 0.8B / 4B / 9B。保留等级概率思路，默认权重改为 [1,.75,.5,.25,0]，输出 [0,1]。",
+      "url": "https://github.com/Q-Future/Q-ReAlign"
+    },
+    {
+      "name": "UnifiedReward 新基座 / 2026",
+      "text": "已公开 UnifiedReward-2.0-qwen35-9b。该更新采用 Qwen3.5-9B；本页架构固定讲 Qwen2.5-VL-7B 版本，不把新基座或 Think 分支训练方式混进同一张图。",
+      "url": "https://huggingface.co/CodeGoat24/UnifiedReward-2.0-qwen35-9b"
+    }
+  ]
+};
+
+</script>
+<script id="metric-lab">
+(function () {
+  'use strict';
+  function initialize() {
+    const root = document.getElementById('metrics-lab');
+    if (!root || !globalThis.InterviewMath) return;
+    const M = globalThis.InterviewMath;
+    const el = id => document.getElementById(id);
+    const fmt = (x, digits = 3) => Number.isFinite(x) ? x.toFixed(digits) : '不可计算';
+    const write = (id, value) => { el(id).textContent = value; };
+    const svgText = (x, y, text, extra = '') => `<text x="${x}" y="${y}" font-size="15" fill="#39564a" ${extra}>${text}</text>`;
+    const tabs = [...root.querySelectorAll('.ml-tab')];
+    let pauseBootstrap = () => {};
+    function selectTab(index, focus) {
+      tabs.forEach((tab, i) => {
+        const active = i === index;
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+        el(tab.getAttribute('aria-controls')).hidden = !active;
+      });
+      if (index !== 2) pauseBootstrap();
+      if (focus) tabs[index].focus();
+    }
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => selectTab(index, false));
+      tab.addEventListener('keydown', event => {
+        let next = index;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault(); selectTab(next, true);
+      });
+    });
+    const presets = {
+      default: {human: [1,2,3,4,5], predicted: [1,2,4,3,5], insight: '默认只交换第 3、4 条的排序：10 个样本对中有 1 个逆序。'},
+      shift: {human: [1,2,3,4,5], predicted: [3,4,5,6,7], insight: '预测全部加 2 分：三种相关系数均为 1，但 MAE=RMSE=2。线性相关并不保证绝对分数准确；这里预测是未校准的原始模型分，尚未映射至 MOS 量表。'},
+      monotone: {human: [1,2,3,4,5], predicted: [1,4,9,16,25], insight: '预测取人评的平方：严格单调，因此 SRCC 和 τ-b 都为 1；PLCC 小于 1，绝对误差很大。比较 MAE/RMSE 前，实际应先在验证集完成量纲与评分映射。'},
+      reverse: {human: [1,2,3,4,5], predicted: [5,4,3,2,1], insight: '顺序完全相反：PLCC、SRCC、τ-b 都为 −1。先检查预测分是不是“失真分”（越大越差），不要误把方向相反当模型失效。'},
+      ties: {human: [1,2,2,4,5], predicted: [1,3,2,4,4], insight: '并列取平均秩：人评中的两个 2 排第 2、3 位，因此秩均为 2.5；预测中的两个 4 的秩均为 4.5。'}
+    };
+    function scatter(human, predicted) {
+      const minimum = Math.min(...human, ...predicted), maximum = Math.max(...human, ...predicted);
+      const span = maximum - minimum || 1, low = minimum - .12 * span, high = maximum + .12 * span;
+      const sx = v => 62 + (v - low) / (high - low) * 415;
+      const sy = v => 270 - (v - low) / (high - low) * 235;
+      let markup = '<title>人评与预测散点图；虚线表示绝对评分相同</title>';
+      for (let i = 0; i < 5; i++) {
+        const tick = minimum + span * i / 4, label = Number.isInteger(tick) ? tick : fmt(tick, 1);
+        markup += `<line x1="${sx(tick)}" y1="35" x2="${sx(tick)}" y2="270" stroke="#edf0eb"/><line x1="62" y1="${sy(tick)}" x2="477" y2="${sy(tick)}" stroke="#edf0eb"/>`;
+        markup += svgText(sx(tick), 291, label, 'text-anchor="middle"') + svgText(52, sy(tick) + 5, label, 'text-anchor="end"');
+      }
+      markup += '<line x1="62" y1="270" x2="477" y2="270" stroke="#84998d"/><line x1="62" y1="270" x2="62" y2="35" stroke="#84998d"/>';
+      markup += `<line x1="${sx(low)}" y1="${sy(low)}" x2="${sx(high)}" y2="${sy(high)}" stroke="#a7c4b2" stroke-width="2" stroke-dasharray="6 5"/>`;
+      human.forEach((value, i) => {
+        const color = value === predicted[i] ? '#176858' : '#b46c40';
+        markup += `<circle cx="${sx(value)}" cy="${sy(predicted[i])}" r="7" fill="${color}"><title>样本${String.fromCharCode(65+i)}：人评${value}，预测${predicted[i]}</title></circle>`;
+        markup += svgText(sx(value) + 11, sy(predicted[i]) - 8, String.fromCharCode(65+i));
+      });
+      markup += svgText(270, 319, '人评 MOS y →', 'text-anchor="middle"') + svgText(65, 20, '模型评分 x ↑');
+      el('ml-scatter').innerHTML = markup;
+      el('ml-scatter').setAttribute('aria-label', `人评${human.join('、')}；预测${predicted.join('、')}。虚线为绝对评分一致。`);
+    }
+    function correlation(name) {
+      const {human: y, predicted: x, insight} = presets[name], m = M.metrics(x, y), k = m.kendall;
+      root.querySelectorAll('[data-ml-preset]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.mlPreset === name)));
+      write('ml-correlation-insight', insight);
+      [['ml-plcc',m.plcc],['ml-srcc',m.srcc],['ml-tau',k.value],['ml-mae',m.mae],['ml-rmse',m.rmse]].forEach(([id,v]) => write(id,fmt(v)));
+      write('ml-pair-count', `${k.c} / ${k.d}`);
+      el('ml-rank-body').innerHTML = y.map((v,i) => `<tr><td>${String.fromCharCode(65+i)}</td><td>${v}</td><td>${x[i]}</td><td>${m.rh[i]}</td><td>${m.rp[i]}</td></tr>`).join('');
+      const covariance = M.sum(x.map((v,i) => (v-m.predictedMean)*(y[i]-m.humanMean)));
+      const ssx = M.sum(x.map(v => (v-m.predictedMean)**2)), ssy = M.sum(y.map(v => (v-m.humanMean)**2));
+      write('ml-plcc-step', `x̄=${fmt(m.predictedMean,2)}，ȳ=${fmt(m.humanMean,2)}；分子=${fmt(covariance,2)}，分母=√(${fmt(ssx,2)}×${fmt(ssy,2)})；PLCC=${fmt(m.plcc,6)}。`);
+      const hasTies = new Set(x).size < x.length || new Set(y).size < y.length;
+      const d2 = M.sum(m.rp.map((v,i) => (v-m.rh[i])**2));
+      write('ml-srcc-step', hasTies ? `有并列时，直接算平均秩的 Pearson：9/9.5=${fmt(m.srcc,6)}。若误套无并列简式会得到0.95；正确结果约0.947368。` : `n=5，d 为两种秩的差；Σd²=${fmt(d2,0)}，因此 1−6×${fmt(d2,0)}/[5×24]=${fmt(m.srcc,6)}。`);
+      write('ml-kendall-step', `C=${k.c}，D=${k.d}，Tₓ=${k.tx}，Tᵧ=${k.ty}；τ-b=(${k.c}−${k.d})/√[${k.c+k.d+k.tx}×${k.c+k.d+k.ty}]=${fmt(k.value,6)}。`);
+      el('ml-kendall-pairs').innerHTML = k.pairs.map(pair => `<span class="ml-pair ${pair.kind==='一致'?'ml-correct':pair.kind==='逆序'?'ml-wrong':'ml-neutral'}">${String.fromCharCode(65+pair.i)}↔${String.fromCharCode(65+pair.j)} ${pair.kind}</span>`).join('');
+      const absolute = M.sum(x.map((v,i) => Math.abs(v-y[i]))), squared = M.sum(x.map((v,i) => (v-y[i])**2));
+      write('ml-error-step', `绝对误差之和${absolute}，平方误差之和${squared}；MAE=${absolute}/5=${fmt(m.mae,6)}，RMSE=√(${squared}/5)=${fmt(m.rmse,6)}。`);
+      scatter(y,x);
+    }
+    root.querySelectorAll('[data-ml-preset]').forEach(button => button.addEventListener('click', () => correlation(button.dataset.mlPreset)));
+    correlation('default');
+
+    const preferenceCases = [{a:4,b:2,gt:'W'},{a:3.1,b:3,gt:'W'},{a:2,b:4,gt:'L'},{a:3.05,b:3,gt:'T'},{a:2,b:2,gt:'T'},{a:3,b:3.3,gt:'W'}];
+    const names = {W:'A胜',T:'平局',L:'A负'};
+    function updatePreference() {
+      const epsilon = Number(el('ml-epsilon').value), p = M.preference(preferenceCases,epsilon);
+      write('ml-epsilon-value',fmt(epsilon,2));
+      el('ml-preference-body').innerHTML = p.rows.map((row,i) => `<tr><td>${i+1}</td><td>${fmt(row.a-row.b,2)}</td><td>${names[row.gt]}</td><td class="${row.gt===row.predicted?'ml-correct':'ml-wrong'}">${names[row.predicted]} ${row.gt===row.predicted?'✓':'×'}</td></tr>`).join('');
+      el('ml-preference-accuracy').innerHTML = `<strong>含 GT 平局的三分类准确率：${p.allCorrect}/${p.rows.length}=${fmt(p.allAccuracy*100,1)}%。</strong><br>去除 GT 平局的严格准确率：${p.nonTieCorrect}/${p.nonTieCount}=${fmt(p.nonTieAccuracy*100,1)}%。`;
+    }
+    el('ml-epsilon').addEventListener('input',updatePreference); updatePreference();
+    function updateBT() {
+      const delta = Number(el('ml-bt-delta').value), result = M.bt(delta);
+      write('ml-bt-delta-value',fmt(delta,2)); write('ml-bt-probability',fmt(result.probability)); write('ml-bt-loss',fmt(result.loss));
+      const sx = v => 60+(v+3)/6*420, sy = v => 232-v*190;
+      let path = '';
+      for(let i=0;i<=120;i++) {const x=-3+i*.05;path+=`${i?'L':'M'}${sx(x).toFixed(2)} ${sy(M.bt(x).probability).toFixed(2)} `;}
+      let markup = '<title>Bradley–Terry sigmoid曲线</title><line x1="60" y1="232" x2="480" y2="232" stroke="#84998d"/><line x1="60" y1="232" x2="60" y2="42" stroke="#84998d"/>';
+      [0,.5,1].forEach(v=>{markup+=`<line x1="60" y1="${sy(v)}" x2="480" y2="${sy(v)}" stroke="#edf0eb"/>`+svgText(49,sy(v)+5,String(v),'text-anchor="end"');});
+      [-3,0,3].forEach(v=>{markup+=svgText(sx(v),254,String(v),'text-anchor="middle"');});
+      markup+=`<path d="${path}" fill="none" stroke="#176858" stroke-width="4"/><line x1="${sx(delta)}" y1="232" x2="${sx(delta)}" y2="${sy(result.probability)}" stroke="#b46c40" stroke-dasharray="5 4"/><circle cx="${sx(delta)}" cy="${sy(result.probability)}" r="7" fill="#b46c40"/>`+svgText(65,22,'P(w ≻ l)')+svgText(470,276,'奖励差 Δ','text-anchor="end"');
+      el('ml-bt-plot').innerHTML=markup; el('ml-bt-plot').setAttribute('aria-label',`奖励差${delta}，BT预测概率${fmt(result.probability,3)}，单对loss${fmt(result.loss,3)}`);
+    }
+    el('ml-bt-delta').addEventListener('input',updateBT); updateBT();
+
+    const differences = [-2,-1,0,0,1,2,3,5], correctCI = M.exactBootstrap(differences,8), wrongCI=M.exactBootstrap(differences,48);
+    function drawCI() {
+      const sx=x=>60+(x+.6)/3.4*420;
+      let markup='<title>配对bootstrap区间与错误帧独立假设下的区间对比</title>';
+      [-.5,0,1,2,2.5].forEach(x=>{markup+=svgText(sx(x),198,String(x),'text-anchor="middle"');});
+      markup+=`<line x1="60" y1="178" x2="480" y2="178" stroke="#84998d"/><line x1="${sx(0)}" y1="35" x2="${sx(0)}" y2="183" stroke="#84998d" stroke-dasharray="5 4"/>`;
+      [{ci:correctCI,y:75,color:'#176858',label:'正确：按8个prompt抽样'},{ci:wrongCI,y:145,color:'#b46c40',label:'错误：把48帧当独立'}].forEach(row=>{
+        markup+=svgText(30,row.y-20,row.label)+`<line x1="${sx(row.ci.lower)}" y1="${row.y}" x2="${sx(row.ci.upper)}" y2="${row.y}" stroke="${row.color}" stroke-width="6"/><line x1="${sx(row.ci.lower)}" y1="${row.y-8}" x2="${sx(row.ci.lower)}" y2="${row.y+8}" stroke="${row.color}" stroke-width="2"/><line x1="${sx(row.ci.upper)}" y1="${row.y-8}" x2="${sx(row.ci.upper)}" y2="${row.y+8}" stroke="${row.color}" stroke-width="2"/><circle cx="${sx(1)}" cy="${row.y}" r="6" fill="${row.color}"/>`;
+      });
+      markup+=svgText(260,228,'A − B 平均差 →','text-anchor="middle"');el('ml-bootstrap-ci').innerHTML=markup;
+    } drawCI();
+    let timer = null, picks = [], cursor = 0, playing = false;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function drawSample() {
+      const visible=picks.slice(0,cursor), sample=visible.map(i=>differences[i]);
+      [...el('ml-bootstrap-prompts').children].forEach((node,i)=>node.classList.toggle('ml-picked',visible.length>0&&visible[visible.length-1]===i));
+      el('ml-bootstrap-progress').style.width=`${cursor/8*100}%`;
+      write('ml-bootstrap-sample',cursor?`${cursor}/8：${visible.map(i=>`P${i+1}(${differences[i]})`).join(' → ')}${cursor===8?`；本次均值 = ${fmt(M.mean(sample),3)}。`:''}`:'等待开始：观察某个 prompt 会被抽到多次，另一个可能一次也没出现。');
+    }
+    pauseBootstrap=function(){if(timer!==null)window.clearTimeout(timer);timer=null;playing=false;el('ml-bootstrap-play').setAttribute('aria-pressed','false');write('ml-bootstrap-play',cursor>0&&cursor<8?'继续播放':cursor===8?'再抽一次':'播放一次重采样');};
+    function stepSample(){if(!playing)return;cursor++;drawSample();if(cursor===8){pauseBootstrap();return;}timer=window.setTimeout(stepSample,550);}
+    el('ml-bootstrap-play').addEventListener('click',()=>{
+      if(playing){pauseBootstrap();return;}
+      if(cursor===0||cursor===8){picks=Array.from({length:8},()=>Math.floor(Math.random()*8));cursor=0;}
+      if(reducedMotion.matches){cursor=8;drawSample();pauseBootstrap();return;}
+      playing=true;el('ml-bootstrap-play').setAttribute('aria-pressed','true');write('ml-bootstrap-play','暂停');stepSample();
+    });
+    el('ml-bootstrap-reset').addEventListener('click',()=>{pauseBootstrap();picks=[];cursor=0;drawSample();write('ml-bootstrap-play','播放一次重采样');});
+    if(reducedMotion.addEventListener)reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches&&playing){cursor=8;drawSample();pauseBootstrap();}});
+
+    const textExamples={default:{reference:'a cat is on mat',candidate:'a cat sits on mat'},roles:{reference:'a dog chases a cat',candidate:'a cat chases a dog'}};
+    function updateText(name){
+      const example=textExamples[name],m=M.textMetrics(example.reference,example.candidate),remaining=new Map();
+      m.reference.forEach(token=>remaining.set(token,(remaining.get(token)||0)+1));
+      el('ml-reference-tokens').innerHTML=m.reference.map(token=>`<span class="ml-token">${token}</span>`).join('');
+      el('ml-candidate-tokens').innerHTML=m.candidate.map(token=>{const hit=(remaining.get(token)||0)>0;if(hit)remaining.set(token,remaining.get(token)-1);return `<span class="ml-token${hit?'':' ml-token-change'}">${token}</span>`;}).join('');
+      root.querySelectorAll('[data-ml-text]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mlText===name)));
+      write('ml-bleu2',fmt(m.bleu2));write('ml-rouge1',fmt(m.rouge1));write('ml-rougel',fmt(m.rougeL));
+      write('ml-ngram-count',`p₁=${m.one}/${m.candidate.length}=${fmt(m.p1,2)}，p₂=${m.two}/${m.candidate.length-1}=${fmt(m.p2,2)}。`);
+      write('ml-bleu-step',`=${fmt(m.bp,0)}×√(${fmt(m.p1,2)}×${fmt(m.p2,2)})=${fmt(m.bleu2,6)}`);
+      write('ml-rouge-step',`一元命中${m.one}，LCS长度${m.lcs}，c=r=5；ROUGE-1 F1=${fmt(m.rouge1,3)}，ROUGE-L F1=${fmt(m.rougeL,3)}。`);
+      write('ml-text-insight',name==='roles'?'参考是“狗追猫”，候选变成“猫追狗”：词完全相同，BLEU-2仍有0.866，ROUGE-1为1，但事件角色已反转。':'“is”换成“sits”，一元词命中4/5；相邻二元组命中2/4。');
+    }
+    root.querySelectorAll('[data-ml-text]').forEach(button=>button.addEventListener('click',()=>updateText(button.dataset.mlText)));updateText('default');
+
+    function updateClip(){
+      const cosine=Number(el('ml-cosine').value),angle=Math.acos(cosine),cx=215,cy=175,r=112,tx=cx+r*cosine,ty=cy-r*Math.sin(angle);
+      write('ml-cosine-value',fmt(cosine,2));write('ml-clip-score',fmt(M.clipScore(cosine)));
+      el('ml-clip-vectors').innerHTML='<title>二维单位向量夹角示意</title>'+`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#dce3dd"/><line x1="80" y1="${cy}" x2="355" y2="${cy}" stroke="#edf0eb"/><line x1="${cx}" y1="${cy}" x2="${cx+r}" y2="${cy}" stroke="#176858" stroke-width="5"/><line x1="${cx}" y1="${cy}" x2="${tx}" y2="${ty}" stroke="#b46c40" stroke-width="5"/><circle cx="${tx}" cy="${ty}" r="6" fill="#b46c40"/>`+svgText(350,cy+6,'图像 v')+svgText(tx,Math.max(22,ty-14),'文本 t','text-anchor="middle"')+svgText(260,245,`夹角 ${fmt(angle*180/Math.PI,1)}°；cos=${fmt(cosine,2)}`,'text-anchor="middle"');
+      el('ml-clip-vectors').setAttribute('aria-label',`二维向量夹角${fmt(angle*180/Math.PI,1)}度，余弦${cosine}，CLIPScore${fmt(M.clipScore(cosine))}`);
+    }
+    el('ml-cosine').addEventListener('input',updateClip);updateClip();
+    function updateGaussian(){
+      const mu=Number(el('ml-gaussian-mean').value),sigma=Number(el('ml-gaussian-sigma').value);
+      write('ml-gaussian-mean-value',fmt(mu,2));write('ml-gaussian-sigma-value',fmt(sigma,2));
+      el('ml-frechet-step').innerHTML=`一维高斯 D²=(μᵣ−μg)²+(σᵣ−σg)²<br>=(0−${fmt(mu,2)})²+(1−${fmt(sigma,2)})²=${fmt(M.frechet1D(0,1,mu,sigma))}`;
+      const density=(x,m,s)=>Math.exp(-.5*((x-m)/s)**2)/(s*Math.sqrt(2*Math.PI));
+      const maxDensity=Math.max(density(0,0,1),density(mu,mu,sigma))*1.15,sx=x=>45+(x+8)/16*445,sy=y=>220-y/maxDensity*175;
+      let markup='<title>一维高斯特征分布教学示意</title><line x1="45" y1="220" x2="490" y2="220" stroke="#84998d"/>';
+      [-8,-4,0,4,8].forEach(x=>{markup+=svgText(sx(x),242,String(x),'text-anchor="middle"');});
+      [{mu:0,sigma:1,color:'#176858'},{mu,sigma,color:'#b46c40'}].forEach(distribution=>{
+        let path='';for(let i=0;i<=240;i++){const x=-8+i/240*16;path+=`${i?'L':'M'}${sx(x).toFixed(2)} ${sy(density(x,distribution.mu,distribution.sigma)).toFixed(2)} `;}
+        markup+=`<path d="${path}" fill="none" stroke="${distribution.color}" stroke-width="3"/>`;
+      });
+      markup+=svgText(35,23,'概率密度（随参数自动缩放纵轴）')+svgText(270,264,'1维特征值 →','text-anchor="middle"');
+      el('ml-gaussian-plot').innerHTML=markup;el('ml-gaussian-plot').setAttribute('aria-label',`真实高斯均值0标准差1；生成高斯均值${mu}标准差${sigma}；一维Frechet距离平方${fmt(M.frechet1D(0,1,mu,sigma))}`);
+    }
+    el('ml-gaussian-mean').addEventListener('input',updateGaussian);el('ml-gaussian-sigma').addEventListener('input',updateGaussian);updateGaussian();
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseBootstrap();});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initialize,{once:true});else initialize();
+})();
+
+</script>
+<script id="model-lab">
+(()=>{
+  'use strict';
+  const dataset=globalThis.InterviewModelData;
+  const root=document.getElementById('architecture-workbench');
+  if(!root||!dataset||!Array.isArray(dataset.models))return;
+  const models=new Map(dataset.models.map(m=>[m.id,m]));
+  const $=id=>document.getElementById(id);
+  const tabs=[...root.querySelectorAll('[data-model]')];
+  const reduced=typeof matchMedia==='function'?matchMedia('(prefers-reduced-motion: reduce)'):null;
+  let current='videoreward',step=0,timer=null;
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const label=(value,fallback)=>Array.isArray(value)?value:(value?[String(value)]:fallback);
+  function fitLines(value,width,fontSize){
+    const result=[];
+    for(const source of label(value,[])){
+      let line='',used=0;
+      for(const char of String(source)){
+        const advance=/[\u0000-\u00ff]/.test(char)?fontSize*.56:fontSize;
+        if(line&&used+advance>width){result.push(line);line='';used=0;}
+        line+=char;used+=advance;
+      }
+      if(line)result.push(line);
+    }
+    return result;
+  }
+  function lines(values,x,y,cls='ar-node-label',lineHeight=21){
+    const a=label(values,[]);return `<text x="${x}" y="${y}" text-anchor="middle" class="${cls}">${a.map((v,i)=>`<tspan x="${x}" dy="${i?lineHeight:0}">${esc(v)}</tspan>`).join('')}</text>`;
+  }
+  function node(id,x,y,w,h,title,stage,subtitle){
+    const a=fitLines(title,w-18,14),b=fitLines(subtitle,w-18,11.5),lineHeight=a.length>3?18:21;
+    const titleY=y+(h-a.length*lineHeight-(b.length?b.length*17+7:0))/2+15;
+    return `<g id="ar-node-${id}" class="ar-node ${step===stage?'ar-active':step>stage?'ar-complete':''}" data-stage="${stage}"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="9"/>${lines(a,x+w/2,titleY,'ar-node-label',lineHeight)}${b.length?lines(b,x+w/2,titleY+a.length*lineHeight+3,'ar-node-sub',17):''}</g>`;
+  }
+  function link(d,stage,animate=false){
+    const active=step===stage;
+    return `<path class="ar-link ${active?'ar-active-link':''}" data-stage="${stage}" d="${d}" marker-end="url(#ar-arrow)"/>${active&&animate&&!(reduced&&reduced.matches)?`<circle class="ar-particle" r="4"><animateMotion dur="0.85s" repeatCount="1" path="${d}" fill="freeze"/></circle>`:''}`;
+  }
+  function text(s,x,y,cls='ar-caption',anchor='middle'){return `<text x="${x}" y="${y}" text-anchor="${anchor}" class="${cls}">${esc(s)}</text>`;}
+  function dualDiagram(m,animate){
+    let s='';
+    s+=link('M 160 86 L 204 86',1,animate)+link('M 160 261 L 204 261',1,animate);
+    s+=link('M 355 86 L 399 86',2,animate)+link('M 355 261 L 399 261',2,animate);
+    s+=link('M 550 86 L 585 86 L 585 155 L 624 155',3,animate)+link('M 550 261 L 585 261 L 585 190 L 624 190',3,animate);
+    s+=link('M 750 173 L 794 173',4,animate);
+    s+=node('image',15,50,145,72,['候选图像'],0,['patch 输入']);
+    s+=node('prompt',15,225,145,72,['同一个 prompt'],0,['文字 token']);
+    s+=node('vision',205,50,150,72,['图像 ViT 塔'],1,['CLIP-H/14']);
+    s+=node('text',205,225,150,72,['文本 Transformer'],1,['独立编码']);
+    s+=node('v',400,50,150,72,['图像向量 v̂'],2,['池化 + L2 归一化']);
+    s+=node('t',400,225,150,72,['文本向量 t̂'],2,['池化 + L2 归一化']);
+    s+=node('cosine',625,125,125,95,['点积 / 余弦'],3,['v̂ · t̂']);
+    s+=node('score',795,125,130,95,['偏好分数'],4,['缩放依实现']);
+    s+=text('图文 token 在评分时不发生交叉注意力；两路只在向量匹配处汇合。',470,335);
+    return {content:s,height:355,description:'图像和文本独立编码，各自归一化成向量，在余弦节点汇合，再根据具体模型输出分数。'};
+  }
+  function imageRewardDiagram(m,animate){
+    let s='';
+    s+=link('M 150 73 L 189 73',1,animate)+link('M 150 273 L 189 273',1,animate);
+    s+=link('M 355 73 L 392 73 L 392 138 L 424 138',2,animate);
+    s+=link('M 355 273 L 392 273 L 392 215 L 424 215',2,animate);
+    s+=link('M 625 173 L 669 173',3,animate)+link('M 785 173 L 819 173',4,animate);
+    s+=node('image',15,40,135,66,['图像'],0);
+    s+=node('prompt',15,240,135,66,['prompt'],0);
+    s+=node('vision',190,35,165,76,['BLIP ViT-L'],1,['图像 patch tokens']);
+    s+=node('text',190,235,165,76,['BLIP 文本编码'],1,['文本 token 作 Query']);
+    s+=node('cross',425,110,200,126,['Cross-attention'],2,['文字 Query 读取','图像 Key / Value']);
+    s+=node('cls',670,128,115,90,['融合 [CLS]'],3,['图文联合特征']);
+    s+=node('mlp',820,128,105,90,['MLP → r'],4,['标量奖励']);
+    s+=text('视觉 K / V',397,119,'ar-annotation');s+=text('文本 Q',395,241,'ar-annotation');
+    s+=text('机制图不代表某张真实图片的 attention 权重；固定输出标准化可使奖励出现负值。',470,345);
+    return {content:s,height:365,description:'图像经BLIP视觉编码，文本编码器以cross attention读取图像tokens；融合后的CLS经过MLP输出标量奖励。'};
+  }
+  function jointDiagram(m,animate){
+    let s='';
+    s+=link('M 160 80 L 194 80',1,animate)+link('M 360 80 L 394 80',2,animate);
+    s+=link('M 555 80 L 573 80 L 573 145 L 594 145',3,animate);
+    s+=link('M 160 265 L 394 265',2,animate)+link('M 555 265 L 573 265 L 573 203 L 594 203',3,animate);
+    s+=link('M 765 174 L 799 174',4,animate);
+    s+=node('visual-input',15,40,145,80,m.inputLabel,0);
+    s+=node('vision',195,40,165,80,m.visionLabel,1);
+    s+=node('connector',395,40,160,80,m.connectorLabel,2);
+    s+=node('prompt',15,225,145,80,m.promptLabel,0);
+    s+=node('text-tokens',395,225,160,80,['文本 embedding'],2,['任务指令 / prompt']);
+    s+=node('llm',595,112,170,125,m.llmLabel,3,['视觉与文本联合建模']);
+    s+=node('output',800,112,125,125,m.outputLabel,4);
+    const caption=m.id==='qalign'?'读出五个等级词的 logits；不需要生成完整解释或一个小数。':m.id==='hpsv3'?'联合理解依赖多模态 token 的语言模型注意力，不能画成 HPSv2 的双塔。':m.id==='unified'?'本图采用 Qwen2.5-VL-7B 的 point-score 视频示例：有序多图输入。':m.id==='videoscore2'?'VQ / TA / PC = 视觉质量 / 文本对齐 / 物理及常识一致性。':'判断文本对齐必须提供目标 prompt；纯视频输入不能推断用户原始意图。';
+    s+=text(caption,470,345);
+    return {content:s,height:365,description:m.title+'：视觉编码、连接模块和文本embedding共同进入多模态语言模型，再按该模型的方式读取或生成分数。'};
+  }
+  function videoRewardDiagram(m,animate){
+    let s='';
+    s+=link('M 150 72 L 184 72',1,animate)+link('M 335 72 L 374 72',2,animate);
+    s+=link('M 550 72 L 570 72 L 570 139',2,animate);
+    s+=link('M 335 292 L 350 292 L 350 192 L 374 192',2,animate);
+    s+=link('M 720 184 L 754 184',3,animate);
+    s+=link('M 837 230 L 837 263 L 582 263 L 582 299',3,animate);
+    s+=link('M 700 334 L 754 334',4,animate);
+    s+=node('video',15,36,135,72,['视频 / 时序采样'],0,['仅视频证据']);
+    s+=node('vision',185,36,150,72,['Qwen2-VL 视觉端'],1,['时空编码']);
+    s+=node('visual-tokens',375,36,175,72,['视觉 tokens'],2,['压缩后的视觉序列']);
+    s+=node('prompt',185,256,150,72,['生成 prompt'],0,['语义对齐的条件']);
+    s+=node('sequence',375,140,345,88,['video → [VQ] → [MQ]','→ prompt → [TA]'],2,['输入 token 的实际先后关系']);
+    s+=node('decoder',755,140,165,90,['因果 Transformer'],3,['Qwen2-VL-2B']);
+    s+=node('hidden',465,300,235,68,['h[VQ] / h[MQ] / h[TA]'],3,['最后层对应位置的表征']);
+    s+=node('shared-head',755,300,165,68,['共享线性评分头'],4,['同一套参数逐位置读出']);
+    s+=text('VQ / MQ 在 prompt 之前，因此无法关注未来的 prompt tokens。',470,401);
+    s+=text('输出：rVQ，rMQ，rTA；维度不同，线性头参数共享。',470,425);
+    return {content:s,height:445,description:'视频tokens后依次放VQ、MQ，再放prompt和TA；因果Transformer使VQ和MQ看不到未来文本，三个位置的最后层hidden states经同一线性头输出三个奖励。'};
+  }
+  function renderDiagram(animate=false){
+    const m=models.get(current);
+    const d=m.kind==='dual'?dualDiagram(m,animate):m.kind==='image'?imageRewardDiagram(m,animate):m.kind==='videoReward'?videoRewardDiagram(m,animate):jointDiagram(m,animate);
+    const svg=$('ar-diagram');svg.setAttribute('viewBox',`0 0 940 ${d.height}`);
+    svg.innerHTML=`<title id="ar-svg-title">${esc(m.title)} 架构，步骤 ${step+1}</title><desc id="ar-svg-desc">${esc(d.description)}</desc><defs><marker id="ar-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#91aa99"/></marker></defs>${d.content}`;
+    $('ar-stage-title').textContent=(step+1)+' '+m.steps[step].title;
+    $('ar-stage-text').textContent=m.steps[step].text;
+    $('ar-step-count').textContent=`步骤 ${step+1} / ${m.steps.length}`;
+    $('ar-prev').disabled=step===0;$('ar-next').disabled=step===m.steps.length-1;
+    root.querySelectorAll('[data-arch-step]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.archStep)===step)));
+  }
+  function stop(){if(timer!==null){clearInterval(timer);timer=null;}$('ar-play').textContent='播放数据流';$('ar-play').setAttribute('aria-pressed','false');}
+  function setStep(value,animate=true){step=Math.max(0,Math.min(models.get(current).steps.length-1,value));renderDiagram(animate);}
+  function renderModel(){
+    stop();step=0;const m=models.get(current);
+    tabs.forEach(tab=>{const active=tab.dataset.model===current;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;});
+    $('ar-model-panel').setAttribute('aria-labelledby','ar-tab-'+current);
+    $('ar-title').textContent=m.title;$('ar-subtitle').textContent=m.subtitle;
+    $('ar-step-buttons').innerHTML=m.steps.map((s,i)=>`<button type="button" data-arch-step="${i}" aria-pressed="${i===0}">${i+1} ${esc(s.title)}</button>`).join('');
+    $('ar-step-buttons').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{stop();setStep(Number(b.dataset.archStep));}));
+    $('ar-training').textContent=m.training;$('ar-limit').textContent=m.limit;
+    $('ar-speech').innerHTML='<strong>30 秒话术：</strong>'+esc(m.speech);
+    $('ar-source').innerHTML='原始来源：'+m.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>`).join(' · ');
+    $('ar-token-mask').hidden=current!=='videoreward';
+    $('ar-grade-demo').hidden=current!=='qalign';
+    if(current==='videoreward')$('ar-token-mask').innerHTML='<h4>因果可见性：一眼看出谁能读到 prompt</h4><div class="table-wrap"><table><thead><tr><th>用于读分的 token</th><th>视频</th><th>[VQ]</th><th>[MQ]</th><th>prompt</th><th>[TA]</th></tr></thead><tbody><tr><td>[VQ]</td><td class="ar-cell-yes">可见</td><td class="ar-cell-yes">自身</td><td class="ar-cell-no">未来</td><td class="ar-cell-no">未来</td><td class="ar-cell-no">未来</td></tr><tr><td>[MQ]</td><td class="ar-cell-yes">可见</td><td class="ar-cell-yes">可见</td><td class="ar-cell-yes">自身</td><td class="ar-cell-no">未来</td><td class="ar-cell-no">未来</td></tr><tr><td>[TA]</td><td class="ar-cell-yes">可见</td><td class="ar-cell-yes">可见</td><td class="ar-cell-yes">可见</td><td class="ar-cell-yes">可见</td><td class="ar-cell-yes">自身</td></tr></tbody></table></div><p class="ar-small">该设计限制 VQ / MQ 的直接文本信息，不等于完全消除所有数据偏置。VQ / MQ 仍从同一个视频多模态基座提取表征；“评分 token 不看未来 prompt”与“整模型没有语言知识”是两回事。</p>';
+    renderDiagram(false);
+  }
+  function gradeExpected(bias){
+    const base=[.05,.1,.2,.4,.25],raw=base.map((p,i)=>p*Math.exp(i===4?bias:0));
+    const total=raw.reduce((a,b)=>a+b,0),prob=raw.map(x=>x/total);
+    return {prob,score:prob.reduce((sum,p,i)=>sum+(i+1)*p,0)};
+  }
+  function renderGrades(){
+    const bias=Number($('ar-excellent').value),r=gradeExpected(bias),names=['bad','poor','fair','good','excellent'];
+    $('ar-excellent-value').textContent=(bias>0?'+':'')+bias.toFixed(1);
+    $('ar-grade-bars').innerHTML=r.prob.map((p,i)=>`<div class="ar-grade-col"><div class="ar-grade-track"><div class="ar-grade-fill" style="height:${(100*p).toFixed(3)}%"></div></div><b>${(p*100).toFixed(1)}%</b><span>${names[i]} × ${i+1}</span></div>`).join('');
+    $('ar-grade-equation').textContent=r.prob.map((p,i)=>(i+1)+'×'+p.toFixed(3)).join(' + ')+' = '+r.score.toFixed(3)+'（按未舍入概率计算）';
+  }
+  tabs.forEach((tab,index)=>{
+    tab.addEventListener('click',()=>{current=tab.dataset.model;renderModel();});
+    tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();tabs[next].click();tabs[next].focus();});
+  });
+  $('ar-prev').addEventListener('click',()=>{stop();setStep(step-1);});
+  $('ar-next').addEventListener('click',()=>{stop();setStep(step+1);});
+  $('ar-play').addEventListener('click',()=>{
+    if(timer!==null){stop();return;}
+    if(step===models.get(current).steps.length-1)setStep(0,false);
+    $('ar-play').textContent='暂停演示';$('ar-play').setAttribute('aria-pressed','true');
+    timer=setInterval(()=>{if(document.hidden||root.hidden||!root.querySelector('.answer').open){stop();return;}if(step>=models.get(current).steps.length-1){stop();return;}setStep(step+1,true);if(step===models.get(current).steps.length-1)stop();},1900);
+  });
+  $('ar-excellent').addEventListener('input',renderGrades);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+  window.addEventListener('beforeprint',stop);
+  $('ar-recent-text').innerHTML=dataset.recent.map(r=>`<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.name)}</a>：${esc(r.text)}`).join('<br>');
+  $('ar-print-all').innerHTML=dataset.models.map(m=>`<div class="ar-print-model"><h4>${esc(m.title)}</h4><p>${esc(m.subtitle)}</p><p><b>数据流：</b>${m.steps.map((s,i)=>(i+1)+' '+esc(s.title)+'：'+esc(s.text)).join(' → ')}</p><p><b>训练：</b>${esc(m.training)}</p><p><b>局限：</b>${esc(m.limit)}</p><p><b>来源：</b>${m.sources.map(s=>`<a href="${esc(s.url)}">${esc(s.title)}</a>`).join('；')}</p></div>`).join('');
+  globalThis.InterviewArchitecture={gradeExpected};
+  renderModel();renderGrades();
+})();
+
+</script>
+<script id="handbook-controls">
+(()=>{
+  'use strict';
+  const cards=[...document.querySelectorAll('.study-card')];
+  const sections=[...document.querySelectorAll('.section')];
+  const details=cards.map(c=>c.querySelector('.answer'));
+  const search=document.getElementById('search');
+  const toggle=document.getElementById('toggle-answers');
+  const filters=[...document.querySelectorAll('[data-filter]')];
+  const storageKey='aigc-interview-20261020-mastered-v1';
+  let filter='all',selfTest=false,marked=new Set(),printSnapshot=null;
+  try{const saved=JSON.parse(localStorage.getItem(storageKey)||'[]');if(Array.isArray(saved))marked=new Set(saved.filter(id=>cards.some(c=>c.id===id)));}catch(_){/* File URLs may restrict browser storage; reading still works. */}
+  const searchText=new Map(cards.map(c=>[c,(c.querySelector('h3').textContent+' '+c.querySelector('.answer').textContent).toLocaleLowerCase()]));
+  function updateProgress(){
+    for(const card of cards){const yes=marked.has(card.id),button=card.querySelector('.mark');button.setAttribute('aria-pressed',String(yes));button.textContent=yes?'已掌握':'标记掌握';}
+    document.getElementById('progress-text').textContent=marked.size+' / '+cards.length;
+    document.getElementById('progress-bar').style.width=(100*marked.size/cards.length)+'%';
+    const progress=document.querySelector('[role="progressbar"]');progress.setAttribute('aria-valuemax',String(cards.length));progress.setAttribute('aria-valuenow',String(marked.size));
+  }
+  function save(){try{localStorage.setItem(storageKey,JSON.stringify([...marked]));}catch(_){}}
+  function applyFilter(){
+    const query=search.value.trim().toLocaleLowerCase();let visible=0;
+    for(const card of cards){const category=filter==='all'||card.dataset.tags.split(' ').includes(filter);const match=!query||searchText.get(card).includes(query);card.hidden=!(category&&match);if(!card.hidden){visible++;card.querySelector('.answer').open=query?true:!selfTest;}}
+    for(const section of sections)section.hidden=![...section.querySelectorAll('.study-card')].some(c=>!c.hidden);
+    document.getElementById('result-status').textContent=visible+' / '+cards.length+' 个复习单元'+(filter==='quick'?' · 建议先口述，再看答案':'')+(query?' · 搜索「'+search.value.trim()+'」':'');
+    document.getElementById('empty').hidden=visible!==0;
+    filters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===filter)));
+    for(const link of document.querySelectorAll('.nav a')){const section=document.querySelector(link.getAttribute('href'));link.hidden=section.hidden;}
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{const target=document.getElementById(link.getAttribute('href').slice(1));if(target&&target.closest('[hidden]')){filter='all';search.value='';applyFilter();}}));
+  filters.forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;applyFilter();}));
+  search.addEventListener('input',applyFilter);
+  toggle.addEventListener('click',()=>{selfTest=!selfTest;toggle.setAttribute('aria-pressed',String(selfTest));toggle.textContent=selfTest?'展开答案复习':'收起答案自测';details.forEach(d=>d.open=!selfTest);});
+  cards.forEach(card=>card.querySelector('.mark').addEventListener('click',()=>{marked.has(card.id)?marked.delete(card.id):marked.add(card.id);save();updateProgress();}));
+  document.getElementById('reset').addEventListener('click',()=>{marked.clear();save();updateProgress();document.getElementById('result-status').textContent='已清除掌握标记。';});
+  document.querySelectorAll('a.source-ref').forEach(a=>a.addEventListener('click',()=>{document.getElementById('sources').open=true;}));
+  function beforePrint(){if(printSnapshot)return;printSnapshot={open:[...document.querySelectorAll('details')].map(d=>d.open),hidden:[...cards,...sections].map(e=>e.hidden)};document.querySelectorAll('details').forEach(d=>d.open=true);[...cards,...sections].forEach(e=>e.hidden=false);}
+  function afterPrint(){if(!printSnapshot)return;document.querySelectorAll('details').forEach((d,i)=>d.open=printSnapshot.open[i]);[...cards,...sections].forEach((e,i)=>e.hidden=printSnapshot.hidden[i]);printSnapshot=null;}
+  window.addEventListener('beforeprint',beforePrint);window.addEventListener('afterprint',afterPrint);
+  document.getElementById('print').addEventListener('click',()=>{beforePrint();try{window.print();}finally{afterPrint();}});
+  if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){document.querySelectorAll('.nav a').forEach(a=>{if(a.getAttribute('href')==='#'+entry.target.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}}},{rootMargin:'-5% 0px -72% 0px',threshold:0});sections.forEach(s=>observer.observe(s));}
+  updateProgress();applyFilter();
+})();
+</script>
+</body>
+</html>
