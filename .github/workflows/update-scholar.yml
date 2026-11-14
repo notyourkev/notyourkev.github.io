@@ -1,0 +1,39 @@
+name: Update Google Scholar citations
+
+on:
+  schedule:
+    # 09:17 in Beijing (UTC+8), once each day.
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scholar-citations
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check parser and fetch public profile
+        run: |
+          python scripts/update_scholar.py --self-test
+          python scripts/update_scholar.py
+      - name: Save successful snapshot
+        run: |
+          if git diff --quiet -- assets/scholar.json; then
+            echo "No new Scholar snapshot to publish"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- assets/scholar.json
+          git commit -m 'Update Google Scholar citation snapshot'
+          git push

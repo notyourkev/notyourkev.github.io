@@ -1,0 +1,23 @@
+{
+  "profile_url": "https://scholar.google.com/citations?user=dPrvOpQAAAAJ&hl=zh-CN",
+  "status": "ok",
+  "updated_at": "2026-11-14T16:20:43Z",
+  "total_citations": 29,
+  "papers": [
+    {
+      "title": "Cinetechbench: A benchmark for cinematographic technique understanding and generation",
+      "citations": 28,
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dPrvOpQAAAAJ&pagesize=100&citation_for_view=dPrvOpQAAAAJ:u5HHmVD_uO8C"
+    },
+    {
+      "title": "VGIF-Score: Interpretable and Diagnostic Evaluation of Spatio-Temporal Instruction Following in Video Generation",
+      "citations": 1,
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dPrvOpQAAAAJ&pagesize=100&citation_for_view=dPrvOpQAAAAJ:d1gkVwhDpl0C"
+    },
+    {
+      "title": "DetailVerifyBench: A Benchmark for Dense Hallucination Localization in Long Image Captions",
+      "citations": null,
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dPrvOpQAAAAJ&pagesize=100&citation_for_view=dPrvOpQAAAAJ:u-x6o8ySG0sC"
+    }
+  ]
+}
