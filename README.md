@@ -12,7 +12,7 @@ GitHub Pages 使用 `notyourkev.github.io` 仓库的 `main` 分支根目录。
 
 ## 页面维护
 
-简介、论文、教育和实习在 `index.html` 中维护；`data-zh` / `data-en` 分别对应中英文文本。`styles.css` 负责响应式排版，教育与实习共用 `.experience` 样式。个人照片使用 `assets/portrait-life-original.jpg`，来自指定原图的完整拷贝。
+简介、论文、教育和实习在 `index.html` 中维护；`data-zh` / `data-en` 分别对应中英文文本。`styles.css` 负责响应式排版，教育与实习共用 `.experience` 样式。个人照片使用 `assets/portrait-half-body.jpg`，完整拷贝自用户裁好的 `个人照/eda46bad848223993a0fea17a812a97a.jpg`，按原始宽高比显示。
 
 ## Google Scholar 引用数
 

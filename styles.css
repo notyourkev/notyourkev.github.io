@@ -40,7 +40,7 @@ html[lang="zh-CN"] h1 > span:first-child, html[lang="en"] h1 small { font-family
 .intro-bio, .intro-interests { text-wrap: balance; }
 .intro-interests { margin-top: 14px; text-wrap: balance; }
 .profile-portrait { min-width: 0; }
-.portrait { width: 225px; height: auto; aspect-ratio: 2 / 3; border-radius: 32px; }
+.portrait { width: 225px; height: auto; border-radius: 32px; }
 .profile-links, .paper-links { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 22px; }
 .profile-links { margin-top: 23px; }
 .profile-links a, .paper-links a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; line-height: 1.5; }
