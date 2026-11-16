@@ -37,7 +37,8 @@ h1 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; margin: 0
 h1 small { font-size: 31px; font-weight: 400; }
 html[lang="zh-CN"] h1 > span:first-child, html[lang="en"] h1 small { font-family: "KaiTi", "STKaiti", var(--heading); }
 .name-divider { color: #b2b8bf; font-size: 26px; }
-.intro-bio, .intro-interests { text-wrap: balance; }
+.intro-bio { text-wrap: pretty; }
+.intro-bio a { white-space: nowrap; }
 .intro-interests { margin-top: 14px; text-wrap: balance; }
 .profile-portrait { min-width: 0; }
 .portrait { width: 225px; height: auto; border-radius: 32px; }
