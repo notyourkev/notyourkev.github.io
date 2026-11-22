@@ -1,6 +1,6 @@
 const languageButtons = document.querySelectorAll('[data-lang]');
 const translatedNodes = document.querySelectorAll('[data-zh][data-en]');
-let currentLanguage = 'zh';
+let currentLanguage = 'en';
 let scholarData = null;
 
 function normalizeTitle(title) {
@@ -34,7 +34,6 @@ function renderScholar() {
 function setLanguage(language) {
   currentLanguage = language;
   document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-  document.title = language === 'zh' ? '许颂毓 | Songyu Xu' : 'Songyu Xu | 许颂毓';
   translatedNodes.forEach((node) => { node.textContent = node.dataset[language]; });
   languageButtons.forEach((button) => {
     const active = button.dataset.lang === language;
@@ -52,8 +51,8 @@ function setLanguage(language) {
 
 languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
 document.getElementById('year').textContent = new Date().getFullYear();
-let savedLanguage = 'zh';
-try { savedLanguage = localStorage.getItem('xsy-language') === 'en' ? 'en' : 'zh'; } catch { /* Use Chinese by default. */ }
+let savedLanguage = 'en';
+try { savedLanguage = localStorage.getItem('xsy-language') === 'zh' ? 'zh' : 'en'; } catch { /* Use English by default. */ }
 setLanguage(savedLanguage);
 
 // Show the bundled snapshot promptly, then refresh from the latest daily commit.
