@@ -1,12 +1,12 @@
 {
   "profile_url": "https://scholar.google.com/citations?user=dPrvOpQAAAAJ&hl=zh-CN",
   "status": "ok",
-  "updated_at": "2026-11-14T20:01:42Z",
-  "total_citations": 29,
+  "updated_at": "2026-11-23T09:11:24Z",
+  "total_citations": 30,
   "papers": [
     {
       "title": "Cinetechbench: A benchmark for cinematographic technique understanding and generation",
-      "citations": 28,
+      "citations": 29,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dPrvOpQAAAAJ&pagesize=100&citation_for_view=dPrvOpQAAAAJ:u5HHmVD_uO8C"
     },
     {
