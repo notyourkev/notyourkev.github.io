@@ -42,7 +42,7 @@ function setLanguage(language) {
   });
   document.querySelector('nav').setAttribute('aria-label', language === 'zh' ? '页面导航' : 'Page sections');
   document.querySelectorAll('[data-figure]').forEach((button) => {
-    const title = button.closest('.publication').dataset.paperTitle.split(':')[0];
+    const title = button.closest('.publication').querySelector('h3').textContent.trim().split(':')[0];
     button.setAttribute('aria-label', language === 'zh' ? `查看 ${title} 配图` : `Enlarge ${title} figure`);
   });
   try { localStorage.setItem('xsy-language', language); } catch { /* Browsing also works without storage. */ }
@@ -102,7 +102,7 @@ document.querySelectorAll('[data-figure]').forEach((button) => {
     const preview = document.getElementById('figure-image');
     preview.src = image.src;
     preview.alt = image.alt;
-    document.getElementById('figure-caption').textContent = button.closest('.publication').dataset.paperTitle;
+    document.getElementById('figure-caption').textContent = button.closest('.publication').querySelector('h3').textContent.trim();
     dialog.showModal();
   });
 });
